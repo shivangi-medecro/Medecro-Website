@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from './components/Navbar'
-import Hero from './components/Hero'
+// import Hero from './components/Hero'
+import HeroCarousel from './components/HeroCarousel'
 import Statistics from './components/Statistics'
 import Solutions from './components/Solutions'
 import Future from './components/Future'
@@ -20,7 +21,8 @@ function page() {
     <div className="min-h-screen">
       <Navbar />
       <main className="pt-12"> 
-        <Hero />
+        {/* <Hero /> */}
+        <HeroCarousel />
         <Statistics />
         <Solutions />
         <Future />
