@@ -46,10 +46,28 @@ export function Hero1() {
 
                             <Link
                                 href="#"
-                                className="inline-flex items-center px-5 py-3 text-sm rounded-full bg-[linear-gradient(145deg,#00EF88,#0316FF)] text-white hover:opacity-90"
+                                className="inline-flex items-center px-5 py-3 text-sm rounded-full bg-[linear-gradient(145deg,#00EF88,#0316FF)] text-white hover:opacity-90 relative group"
                             >
                                 Schedule a Demo
                                 <Image src="/capsule.png" alt="Schedule" width={14} height={14} className="ml-2" />
+                                
+                                {/* Hover tooltip with image */}
+                                <div className="absolute opacity-0 group-hover:opacity-100 transition-opacity duration-300 -bottom-30 left-25 -translate-x-1/2 z-50 pointer-events-none">
+                                    <div className="relative" style={{ width: '200px', height: 'auto' }}>
+                                        <Image 
+                                            src="/Hero/hover.png" 
+                                            alt="Hover background" 
+                                            width={200} 
+                                            height={100} 
+                                            style={{ width: '100%', height: 'auto' }}
+                                            className="max-w-none"
+                                            priority
+                                        />
+                                        <div className="absolute inset-0 flex items-center justify-center" style={{ paddingTop: '0px' }}>
+                                            <p className="text-black text-center font-medium text-sm max-w-[8rem]">Schedule a Demo to know more</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </Link>
                         </div>
 
@@ -129,10 +147,28 @@ export function Hero2() {
 
                             <Link
                                 href="#"
-                                className="inline-flex items-center px-5 py-3 text-sm rounded-full bg-[linear-gradient(145deg,#00EF88,#0316FF)] text-white hover:opacity-90"
+                                className="inline-flex items-center px-5 py-3 text-sm rounded-full bg-[linear-gradient(145deg,#00EF88,#0316FF)] text-white hover:opacity-90 relative group"
                             >
                                 Schedule a Demo
                                 <Image src="/capsule.png" alt="Schedule" width={14} height={14} className="ml-2" />
+                                
+                                {/* Hover tooltip with image */}
+                                <div className="absolute opacity-0 group-hover:opacity-100 transition-opacity duration-300 -bottom-30 left-25 -translate-x-1/2 z-50 pointer-events-none">
+                                    <div className="relative" style={{ width: '200px', height: 'auto' }}>
+                                        <Image 
+                                            src="/Hero/hover.png" 
+                                            alt="Hover background" 
+                                            width={200} 
+                                            height={100} 
+                                            style={{ width: '100%', height: 'auto' }}
+                                            className="max-w-none"
+                                            priority
+                                        />
+                                        <div className="absolute inset-0 flex items-center justify-center" style={{ paddingTop: '0px' }}>
+                                            <p className="text-black text-center font-medium text-sm max-w-[8rem]">Schedule a Demo to know more</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </Link>
                         </div>
 
@@ -213,10 +249,28 @@ export function Hero3() {
 
                             <Link
                                 href="#"
-                                className="inline-flex items-center px-5 py-3 text-sm rounded-full bg-[linear-gradient(145deg,#00EF88,#0316FF)] text-white hover:opacity-90"
+                                className="inline-flex items-center px-5 py-3 text-sm rounded-full bg-[linear-gradient(145deg,#00EF88,#0316FF)] text-white hover:opacity-90 relative group"
                             >
                                 Schedule a Demo
                                 <Image src="/capsule.png" alt="Schedule" width={14} height={14} className="ml-2" />
+                                
+                                {/* Hover tooltip with image */}
+                                <div className="absolute opacity-0 group-hover:opacity-100 transition-opacity duration-300 -bottom-30 left-25 -translate-x-1/2 z-50 pointer-events-none">
+                                    <div className="relative" style={{ width: '200px', height: 'auto' }}>
+                                        <Image 
+                                            src="/Hero/hover.png" 
+                                            alt="Hover background" 
+                                            width={200} 
+                                            height={100} 
+                                            style={{ width: '100%', height: 'auto' }}
+                                            className="max-w-none"
+                                            priority
+                                        />
+                                        <div className="absolute inset-0 flex items-center justify-center" style={{ paddingTop: '0px' }}>
+                                            <p className="text-black text-center font-medium text-sm max-w-[8rem]">Schedule a Demo to know more</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </Link>
                         </div>
 
@@ -296,10 +350,28 @@ export function Hero4() {
 
                             <Link
                                 href="#"
-                                className="inline-flex items-center px-5 py-3 text-sm rounded-full bg-[linear-gradient(145deg,#00EF88,#0316FF)] text-white hover:opacity-90"
+                                className="inline-flex items-center px-5 py-3 text-sm rounded-full bg-[linear-gradient(145deg,#00EF88,#0316FF)] text-white hover:opacity-90 relative group"
                             >
                                 Schedule a Demo
                                 <Image src="/capsule.png" alt="Schedule" width={14} height={14} className="ml-2" />
+                                
+                                {/* Hover tooltip with image */}
+                                <div className="absolute opacity-0 group-hover:opacity-100 transition-opacity duration-300 -bottom-30 left-25 -translate-x-1/2 z-50 pointer-events-none">
+                                    <div className="relative" style={{ width: '200px', height: 'auto' }}>
+                                        <Image 
+                                            src="/Hero/hover.png" 
+                                            alt="Hover background" 
+                                            width={200} 
+                                            height={100} 
+                                            style={{ width: '100%', height: 'auto' }}
+                                            className="max-w-none"
+                                            priority
+                                        />
+                                        <div className="absolute inset-0 flex items-center justify-center" style={{ paddingTop: '0px' }}>
+                                            <p className="text-black text-center font-medium text-sm max-w-[8rem]">Schedule a Demo to know more</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </Link>
                         </div>
 
