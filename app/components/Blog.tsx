@@ -39,66 +39,77 @@ function Blog() {
       <div className="container mx-auto px-6">
         <div className="max-w-[1200px] mx-auto">
           {/* Header */}
-          <div className="flex justify-between items-center mb-12">
-            <h2 className="text-3xl font-bold text-white">Blogs</h2>
+          <div className="flex justify-between items-center mb-20">
             <div className="flex items-center gap-3">
-              <span className="text-[#00EF88] text-sm font-medium">Check all</span>
+              <h2 className="text-2xl font-bold text-white mr-6 ">Blogs</h2>
               <Image
                 src="/Blog/big-arrow.png"
                 alt="View all blogs"
-                width={24}
-                height={24}
-                className="brightness-0 invert"
+                width={144}
+                height={144}
+                className="w-36 h-auto"
               />
+            </div>
+            <div className="flex flex-col items-end">
+              <span className="text-white text-sm font-medium">Check all</span>
+              <div className="h-[3px] bg-[#00EF88] mt-1 w-full"></div>
             </div>
           </div>
 
           {/* Blog Posts Grid */}
-          <div className="grid grid-cols-3 gap-6">
+          <div className="grid grid-cols-3 gap-8 pl-40">
             {blogPosts.map((post, index) => (
               <div key={post.id} className="group cursor-pointer">
-                {/* Image Container */}
-                <div className="relative w-full aspect-[4/3] mb-6 rounded-lg overflow-hidden">
-                  <Image
-                    src={post.image}
-                    alt={post.title}
-                    fill
-                    className="object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
-
-                {/* Content */}
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between">
-                    <span className="text-[#00EF88] text-sm">{post.date}</span>
-                    <div className="flex items-center gap-2">
-                      <Image
-                        src="/Blog/download.png"
-                        alt="Download"
-                        width={20}
-                        height={20}
-                        className="opacity-60 brightness-0 invert"
-                      />
-                      <Image
-                        src="/Blog/share.png"
-                        alt="Share"
-                        width={20}
-                        height={20}
-                        className="  invert"
-                      />
-                    </div>
-                  </div>
+                {/* Date and Title above image */}
+                <div className="space-y-4 mb-4">
+                  <p className="text-white text-sm mb-4">{post.date}</p>
                   <h3 className="text-xl font-semibold text-white leading-snug">
                     {post.title}
                   </h3>
+                </div>
+                
+                {/* Image container */}
+                <div className="relative mb-6">
+                  <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden">
+                    <Image
+                      src={post.image}
+                      alt={post.title}
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                </div>
+
+                {/* Content below image */}
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="inline-block px-4 py-1.5 bg-transparent text-[#00EF88] text-sm rounded-3xl border border-[#00EF88]">
+                      {post.category}
+                    </span>
+                    
+                    {post.id === 2 && (
+                      <div className="flex items-center gap-2">
+                        <Image
+                          src="/Blog/download.png"
+                          alt="Download"
+                          width={20}
+                          height={20}
+                        />
+                        <Image
+                          src="/Blog/share.png"
+                          alt="Share"
+                          width={20}
+                          height={20}
+                        />
+                      </div>
+                    )}
+                  </div>
+                  
                   {post.description && (
-                    <p className="text-white/60 text-sm leading-relaxed">
+                    <p className="text-white/80 text-sm leading-relaxed">
                       {post.description}
                     </p>
                   )}
-                  <span className="inline-block px-4 py-1.5 bg-white/10 text-white text-sm rounded-full">
-                    {post.category}
-                  </span>
                 </div>
               </div>
             ))}
