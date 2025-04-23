@@ -1,7 +1,12 @@
 'use client'
 import React, { useState } from 'react'
 import Image from 'next/image'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Navigation } from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/navigation'
 
+// Duplicate blog posts to have more content for scrolling
 const blogPosts = [
   {
     id: 1,
@@ -24,16 +29,33 @@ const blogPosts = [
     title: "Importance of Dental Checkups: More Than Just Clean Teeth",
     image: "/Blog/blog3.png",
     category: "Patient Guide"
+  },
+  // Duplicated posts to show scrolling behavior
+  {
+    id: 4,
+    date: "Feb 22, 2025",
+    title: "How to Handle Dental Emergencies",
+    image: "/Blog/blog1.png",
+    category: "Patient Guide"
+  },
+  {
+    id: 5,
+    date: "Feb 08, 2025",
+    title: "Teeth Sensitivity: Causes, Prevention, and Treatments",
+    image: "/Blog/blog2.png",
+    description: "Do hot or cold foods make you wince? Understand the common reasons behind tooth sensitivity and how you can manage it effectively.",
+    category: "Patient Guide"
+  },
+  {
+    id: 6,
+    date: "Jan 30, 2025",
+    title: "Importance of Dental Checkups: More Than Just Clean Teeth",
+    image: "/Blog/blog3.png",
+    category: "Patient Guide"
   }
 ]
 
 function Blog() {
-  const [currentIndex, setCurrentIndex] = useState(0)
-
-  const handleNext = () => {
-    setCurrentIndex((prev) => (prev === blogPosts.length - 1 ? 0 : prev + 1))
-  }
-
   return (
     <div className="w-full bg-[#1E1E1E] pt-80 pb-20">
       <div className="container mx-auto px-6">
@@ -41,7 +63,7 @@ function Blog() {
           {/* Header */}
           <div className="flex justify-between items-center mb-20">
             <div className="flex items-center gap-3">
-              <h2 className="text-2xl font-bold text-white mr-6 ">Blogs</h2>
+              <h2 className="text-2xl font-bold text-white mr-6">Blogs</h2>
               <Image
                 src="/Blog/big-arrow.png"
                 alt="View all blogs"
@@ -56,63 +78,91 @@ function Blog() {
             </div>
           </div>
 
-          {/* Blog Posts Grid */}
-          <div className="grid grid-cols-3 gap-8 pl-40">
-            {blogPosts.map((post, index) => (
-              <div key={post.id} className="group cursor-pointer">
-                {/* Date and Title above image */}
-                <div className="space-y-4 mb-4">
-                  <p className="text-white text-sm mb-4">{post.date}</p>
-                  <h3 className="text-xl font-semibold text-white leading-snug">
-                    {post.title}
-                  </h3>
-                </div>
-                
-                {/* Image container */}
-                <div className="relative mb-6">
-                  <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden">
-                    <Image
-                      src={post.image}
-                      alt={post.title}
-                      fill
-                      className="object-cover transition-transform duration-300 group-hover:scale-105"
-                    />
-                  </div>
-                </div>
-
-                {/* Content below image */}
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between">
-                    <span className="inline-block px-4 py-1.5 bg-transparent text-[#00EF88] text-sm rounded-3xl border border-[#00EF88]">
-                      {post.category}
-                    </span>
-                    
-                    {post.id === 2 && (
-                      <div className="flex items-center gap-2">
-                        <Image
-                          src="/Blog/download.png"
-                          alt="Download"
-                          width={20}
-                          height={20}
-                        />
-                        <Image
-                          src="/Blog/share.png"
-                          alt="Share"
-                          width={20}
-                          height={20}
-                        />
+          {/* Blog Posts Carousel */}
+          <div className="relative blog-carousel-container">
+            <div className="pl-40">
+              <Swiper
+                modules={[Navigation]}
+                spaceBetween={32}
+                slidesPerView={3.5}
+                navigation={{
+                  nextEl: '.blog-button-next',
+                  prevEl: '.blog-button-prev',
+                }}
+                grabCursor={true}
+                keyboard={{
+                  enabled: true,
+                }}
+                loop={true}
+                className="blog-swiper"
+              >
+                {blogPosts.map((post) => (
+                  <SwiperSlide key={post.id} className="h-full">
+                    <div className="group cursor-pointer h-full flex flex-col">
+                      {/* Fixed height for title section to ensure alignment */}
+                      <div className="space-y-1 h-32">
+                        <p className="text-white text-sm mb-4">{post.date}</p>
+                        <h3 className="text-xl font-semibold text-white leading-snug line-clamp-2">
+                          {post.title}
+                        </h3>
                       </div>
-                    )}
-                  </div>
-                  
-                  {post.description && (
-                    <p className="text-white/80 text-sm leading-relaxed">
-                      {post.description}
-                    </p>
-                  )}
-                </div>
-              </div>
-            ))}
+                      
+                      {/* Image container - fixed aspect ratio */}
+                      <div className="relative mb-6 w-full">
+                        <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden">
+                          <Image
+                            src={post.image}
+                            alt={post.title}
+                            fill
+                            className="object-cover transition-transform duration-300 group-hover:scale-105"
+                          />
+                        </div>
+                      </div>
+
+                      {/* Content below image */}
+                      <div className="space-y-3 mt-auto">
+                        <div className="flex items-center justify-between">
+                          <span className="inline-block px-4 py-1.5 bg-transparent text-[#00EF88] text-sm rounded-3xl border border-[#00EF88]">
+                            {post.category}
+                          </span>
+                          
+                          {(post.id === 2 || post.id === 5) && (
+                            <div className="flex items-center gap-2">
+                              <Image
+                                src="/Blog/download.png"
+                                alt="Download"
+                                width={20}
+                                height={20}
+                              />
+                              <Image
+                                src="/Blog/share.png"
+                                alt="Share"
+                                width={20}
+                                height={20}
+                              />
+                            </div>
+                          )}
+                        </div>
+                        
+                        {post.description && (
+                          <p className="text-white/80 text-sm leading-relaxed">
+                            {post.description}
+                          </p>
+                        )}
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
+            
+            {/* Custom Navigation with > and < symbols */}
+            <div className="blog-button-prev absolute top-1/2 left-4 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-white/20 rounded-full cursor-pointer hover:bg-white/50 transition-all">
+              <span className="text-white/50 text-xl font-medium">&lt;</span>
+            </div>
+            <div className="blog-button-next absolute top-1/2 right-4 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-white/20 rounded-full cursor-pointer hover:bg-white/50 transition-all">
+              <span className="text-white/50 text-xl font-medium">&gt;</span>
+            </div>
           </div>
         </div>
       </div>
