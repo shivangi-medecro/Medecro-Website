@@ -46,7 +46,7 @@ export function Hero1() {
 
                             <Link
                                 href="#"
-                                className="inline-flex items-center px-5 py-3 text-sm rounded-full bg-[linear-gradient(145deg,#00EF88,#0316FF)] text-white hover:opacity-90 relative group"
+                                className="inline-flex items-center px-5 py-3 text-sm rounded-full bg-[linear-gradient(145deg,#00EF88,#0316FF)] text-white hover:opacity-80 relative group"
                             >
                                 Schedule a Demo
                                 <Image src="/capsule.png" alt="Schedule" width={14} height={14} className="ml-2" />
@@ -147,7 +147,7 @@ export function Hero2() {
 
                             <Link
                                 href="#"
-                                className="inline-flex items-center px-5 py-3 text-sm rounded-full bg-[linear-gradient(145deg,#00EF88,#0316FF)] text-white hover:opacity-90 relative group"
+                                className="inline-flex items-center px-5 py-3 text-sm rounded-full bg-[linear-gradient(145deg,#00EF88,#0316FF)] text-white hover:opacity-80 relative group"
                             >
                                 Schedule a Demo
                                 <Image src="/capsule.png" alt="Schedule" width={14} height={14} className="ml-2" />
@@ -249,7 +249,7 @@ export function Hero3() {
 
                             <Link
                                 href="#"
-                                className="inline-flex items-center px-5 py-3 text-sm rounded-full bg-[linear-gradient(145deg,#00EF88,#0316FF)] text-white hover:opacity-90 relative group"
+                                className="inline-flex items-center px-5 py-3 text-sm rounded-full bg-[linear-gradient(145deg,#00EF88,#0316FF)] text-white hover:opacity-80 relative group"
                             >
                                 Schedule a Demo
                                 <Image src="/capsule.png" alt="Schedule" width={14} height={14} className="ml-2" />
@@ -350,7 +350,7 @@ export function Hero4() {
 
                             <Link
                                 href="#"
-                                className="inline-flex items-center px-5 py-3 text-sm rounded-full bg-[linear-gradient(145deg,#00EF88,#0316FF)] text-white hover:opacity-90 relative group"
+                                className="inline-flex items-center px-5 py-3 text-sm rounded-full bg-[linear-gradient(145deg,#00EF88,#0316FF)] text-white hover:opacity-80 relative group"
                             >
                                 Schedule a Demo
                                 <Image src="/capsule.png" alt="Schedule" width={14} height={14} className="ml-2" />

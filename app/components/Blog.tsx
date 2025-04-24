@@ -160,7 +160,7 @@ function Blog() {
             <div className="blog-button-prev absolute top-1/2 left-4 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-white/20 rounded-full cursor-pointer hover:bg-white/50 transition-all">
               <span className="text-white/50 text-xl font-medium">&lt;</span>
             </div>
-            <div className="blog-button-next absolute top-1/2 right-4 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-white/20 rounded-full cursor-pointer hover:bg-white/50 transition-all">
+            <div className="blog-button-next absolute top-1/2 right-4 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-white/30 rounded-full cursor-pointer hover:bg-white/50 transition-all">
               <span className="text-white/50 text-xl font-medium">&gt;</span>
             </div>
           </div>

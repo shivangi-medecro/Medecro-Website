@@ -22,7 +22,7 @@ function Future() {
 
               <Link 
                 href="#" 
-                className="inline-flex items-center px-6 py-3 text-[0.875rem] rounded-full bg-[linear-gradient(145deg,#00EF88,#0316FF)] text-white hover:opacity-90"
+                className="inline-flex items-center px-6 py-3 text-[0.875rem] rounded-full bg-[linear-gradient(145deg,#00EF88,#0316FF)] text-white hover:opacity-80"
               >
                 Book a Demo
                 <Image src="/capsule.png" alt="Book Demo" width={14} height={14} className="ml-2" />
@@ -40,7 +40,7 @@ function Future() {
                 />
                 {/* Play Button Overlay */}
                 {/* <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-[3.25rem] h-[3.25rem] bg-white rounded-full flex items-center justify-center cursor-pointer hover:opacity-90">
+                  <div className="w-[3.25rem] h-[3.25rem] bg-white rounded-full flex items-center justify-center cursor-pointer hover:opacity-80">
                     <div className="w-0 h-0 border-t-[6px] border-t-transparent border-l-[9px] border-l-[#0316FF] border-b-[6px] border-b-transparent ml-1"></div>
                   </div>
 

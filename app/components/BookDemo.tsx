@@ -138,7 +138,7 @@ function BookDemo() {
               <div className="mt-8">
                 <button
                   type="submit"
-                  className="inline-flex items-center px-6 py-3 text-sm font-medium rounded-full bg-[linear-gradient(145deg,#00EF88,#0316FF)] text-white hover:opacity-90"
+                  className="inline-flex items-center px-6 py-3 text-sm font-medium rounded-full bg-[linear-gradient(145deg,#00EF88,#0316FF)] text-white hover:opacity-80"
                 >
                   Book a Demo
                   <Image src="/capsule.png" alt="Book Demo" width={14} height={14} className="ml-2" />

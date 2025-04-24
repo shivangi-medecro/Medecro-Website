@@ -32,7 +32,7 @@ function WhyUs() {
             
             <Link 
               href="#contact" 
-              className="inline-flex items-center px-4 py-2.5 bg-white text-black rounded-full text-xs hover:bg-opacity-90 transition-colors mr-4"
+              className="inline-flex items-center px-4 py-2.5 bg-white text-black rounded-full text-xs hover:bg-opacity-80 transition-colors mr-4 hover:bg-white/80"
             >
               Contact Us to Learn More
               <Image 

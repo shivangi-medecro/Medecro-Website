@@ -16,7 +16,7 @@ function DoctorSearch() {
               <span className="text-[#231F20]">Right Away</span>
             </h2>
             
-            <p className="text-[#231F20] text-base mb-8 opacity-90">
+            <p className="text-[#231F20] text-base mb-8 opacity-80">
               Search top-rated doctors by name, specialty, or location,
               and book appointments quickly and effortlessly.
             </p>

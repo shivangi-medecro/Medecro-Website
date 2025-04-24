@@ -68,10 +68,10 @@ function Faq() {
       question: "What are the steps to reschedule or cancel an appointment?",
       answer: "To reschedule or cancel an appointment, navigate to the Calendar section, find the appointment, and use the reschedule or cancel options in the dropdown menu."
     },
-    {
-      question: "What are the steps to reschedule or cancel an appointment?",
-      answer: "To reschedule or cancel an appointment, navigate to the Calendar section, find the appointment, and use the reschedule or cancel options in the dropdown menu."
-    }
+    // {
+    //   question: "What are the steps to reschedule or cancel an appointment?",
+    //   answer: "To reschedule or cancel an appointment, navigate to the Calendar section, find the appointment, and use the reschedule or cancel options in the dropdown menu."
+    // }
   ];
 
   const handleToggle = (index: number) => {
@@ -106,7 +106,7 @@ function Faq() {
                   />
                   <button 
                     type="submit"
-                    className="inline-flex items-center px-6 py-3 text-sm font-medium rounded-full bg-[linear-gradient(145deg,#00EF88,#0316FF)] text-white hover:opacity-90 mt-4"
+                    className="inline-flex items-center px-6 py-3 text-sm font-medium rounded-full bg-[linear-gradient(145deg,#00EF88,#0316FF)] text-white hover:opacity-80 mt-4"
                   >
                     Send Now
                     <Image src="/capsule.png" alt="Send Now" width={14} height={14} className="ml-2" />

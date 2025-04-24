@@ -24,7 +24,7 @@ const Footer = () => {
 
           {/* Navigation Links */}
           <div className="flex items-center space-x-6 mx-10 text-xs">
-            <Link href="/" className="text-[#00EF88] hover:opacity-90">Home</Link>
+            <Link href="/" className="text-[#00EF88] hover:opacity-80">Home</Link>
             <Link href="/vision" className="hover:text-[#00EF88]">Vision</Link>
             <Link href="/career" className="hover:text-[#00EF88]">Career</Link>
             <Link href="/abha-abdm" className="hover:text-[#00EF88]">ABHA / ABDM</Link>

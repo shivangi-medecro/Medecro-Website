@@ -38,7 +38,7 @@ function HealthcarePower() {
 
               <Link 
                 href="#" 
-                className="inline-flex items-center px-5 py-3 text-sm rounded-full bg-[linear-gradient(145deg,#00EF88,#0316FF)] text-white hover:opacity-90"
+                className="inline-flex items-center px-5 py-3 text-sm rounded-full bg-[linear-gradient(145deg,#00EF88,#0316FF)] text-white hover:opacity-80"
               >
                 Get in touch with us
                 <Image src="/capsule.png" alt="Contact" width={14} height={14} className="ml-2" />

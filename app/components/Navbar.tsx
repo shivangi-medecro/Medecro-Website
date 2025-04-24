@@ -80,13 +80,13 @@ const Navbar = () => {
           <div className="flex items-center space-x-3 ml-8">
             <Link 
               href="/app" 
-              className="px-5 py-3 rounded-full bg-[linear-gradient(145deg,#00EF88,#0316FF)] text-white hover:opacity-90"
+              className="px-5 py-3 rounded-full bg-[linear-gradient(145deg,#00EF88,#0316FF)] text-white hover:opacity-80"
             >
               Go to App
             </Link>
             <Link 
               href="/signin" 
-              className="flex items-center px-5 py-3 rounded-full bg-[linear-gradient(145deg,#00EF88,#0316FF)] text-white hover:opacity-90"
+              className="flex items-center px-5 py-3 rounded-full bg-[linear-gradient(145deg,#00EF88,#0316FF)] text-white hover:opacity-80"
             >
               Sign In
               <Image src="/capsule.png" alt="Sign In" width={16} height={16} className="ml-2" />
