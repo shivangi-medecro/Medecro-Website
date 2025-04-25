@@ -58,8 +58,8 @@ const blogPosts = [
 function Blog() {
   return (
     <div className="w-full bg-[#1E1E1E] pt-80 pb-20">
-      <div className="container mx-auto px-6">
-        <div className="max-w-[1200px] mx-auto">
+      <div className="container mx-auto px-4">
+        <div className=" mx-auto">
           {/* Header */}
           <div className="flex justify-between items-center mb-20">
             <div className="flex items-center gap-3">
@@ -80,11 +80,11 @@ function Blog() {
 
           {/* Blog Posts Carousel */}
           <div className="relative blog-carousel-container">
-            <div className="pl-40">
+            <div className="px-12">
               <Swiper
                 modules={[Navigation]}
                 spaceBetween={32}
-                slidesPerView={3.5}
+                slidesPerView={4}
                 navigation={{
                   nextEl: '.blog-button-next',
                   prevEl: '.blog-button-prev',
@@ -157,12 +157,20 @@ function Blog() {
             </div>
             
             {/* Custom Navigation with > and < symbols */}
-            <div className="blog-button-prev absolute top-1/2 left-4 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-white/20 rounded-full cursor-pointer hover:bg-white/50 transition-all">
-              <span className="text-white/50 text-xl font-medium">&lt;</span>
+            <div className="blog-button-prev absolute top-1/2 left-0 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-white/20 rounded-full cursor-pointer hover:bg-white/30 transition-all">
+              <span className="text-white/70 text-xl font-medium">&lt;</span>
             </div>
-            <div className="blog-button-next absolute top-1/2 right-4 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-white/30 rounded-full cursor-pointer hover:bg-white/50 transition-all">
-              <span className="text-white/50 text-xl font-medium">&gt;</span>
+            <div className="blog-button-next absolute top-1/2 right-0 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-white/20 rounded-full cursor-pointer hover:bg-white/30 transition-all">
+              <span className="text-white/70 text-xl font-medium">&gt;</span>
             </div>
+
+            {/* <div className="blog-button-prev absolute top-1/2 left-0 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-white/30 rounded-full cursor-pointer hover:bg-white/50 transition-all">
+              <span className="text-gray-400 text-xl font-semibold">&lt;</span>
+            </div>
+            <div className="blog-button-next absolute top-1/2 right-0 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-white/30 rounded-full cursor-pointer hover:bg-white/50 transition-all">
+              <span className="text-white/20 text-xl font-semibold">&gt;</span>
+            </div> */}
+
           </div>
         </div>
       </div>
