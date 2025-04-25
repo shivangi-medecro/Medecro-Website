@@ -59,13 +59,13 @@ const Navbar = () => {
               {isProductsOpen && (
                 <div className="absolute right-0 mt-2 w-50 bg-white rounded-2xl shadow-lg p-2">
                   <Link href="/doctors-dashboard" className="block px-4 py-1 text-black hover:bg-[#E8EAFF] rounded-xl">
-                    Doctor's Dashboard
+                    Doctor&apos;s Dashboard
                   </Link>
                   <Link href="/doctors-app" className="block px-4 py-1 text-black hover:bg-[#E8EAFF] rounded-xl">
-                    Doctor's App
+                    Doctor&apos;s App
                   </Link>
                   <Link href="/patients-app" className="block px-4 py-1 text-black hover:bg-[#E8EAFF] rounded-xl">
-                    Patient's App
+                    Patient&apos;s App
                   </Link>
                 </div>
               )}

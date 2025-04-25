@@ -2,7 +2,8 @@
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 
-const testimonials = [
+// Testimonial data
+const testimonialData = [
   {
     id: 1,
     image: "/Testimonials/avatar1.jpg",
@@ -29,6 +30,7 @@ const testimonials = [
 function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [activeArrow, setActiveArrow] = useState<'left' | 'right' | null>(null)
+  const [animation, setAnimation] = useState('')
 
   // Set the right arrow as active by default
   useEffect(() => {
@@ -36,13 +38,33 @@ function Testimonials() {
   }, []);
 
   const handlePrev = () => {
-    setCurrentIndex((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1))
-    setActiveArrow('left')
+    // Apply animation
+    setAnimation('slide-out-right')
+    setTimeout(() => {
+      setCurrentIndex((prev) => (prev === 0 ? testimonialData.length - 1 : prev - 1))
+      setActiveArrow('left')
+      setAnimation('slide-in-left')
+      
+      // Remove animation class after transition
+      setTimeout(() => {
+        setAnimation('')
+      }, 300)
+    }, 300)
   }
 
   const handleNext = () => {
-    setCurrentIndex((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1))
-    setActiveArrow('right')
+    // Apply animation
+    setAnimation('slide-out-left')
+    setTimeout(() => {
+      setCurrentIndex((prev) => (prev === testimonialData.length - 1 ? 0 : prev + 1))
+      setActiveArrow('right')
+      setAnimation('slide-in-right')
+      
+      // Remove animation class after transition
+      setTimeout(() => {
+        setAnimation('')
+      }, 300)
+    }, 300)
   }
 
   return (
@@ -65,11 +87,9 @@ function Testimonials() {
 
             {/* Right Section - Content */}
             <div className="flex-1">
-              {/* Profile Images and Navigation - Now positioned at opposite corners */}
               <div className="flex justify-between items-center w-full mb-8">
                 {/* Profile Images with fixed ring and comma */}
                 <div className="profile-carousel relative h-14 w-[120px]">
-                  {/* Fixed blue ring for active image */}
                   <div className="absolute left-0 top-0 w-14 h-14 rounded-full border-2 border-[#0316FF] z-20 pointer-events-none"></div>
                   
                   {/* Fixed comma icon */}
@@ -83,17 +103,16 @@ function Testimonials() {
                     />
                   </div>
                   
-                  {/* Display 3 profile images */}
+                  {/* Display profile images */}
                   <div className="relative w-full h-full">
-                    {testimonials.map((testimonial, index) => {
+                    {testimonialData.map((testimonial, index) => {
                       // Calculate positions for the 3 visible profile images
-                      const diff = (index - currentIndex + testimonials.length) % testimonials.length;
+                      const diff = (index - currentIndex + testimonialData.length) % testimonialData.length;
                       
-                      // Only show 3 images (current, next, and next+1)
+                      // Only show 3 images
                       if (diff > 2) return null;
                       
-                      // Position offset - adjust for 20% overlap
-                      // Each image is 56px wide, so 20% overlap means shift by ~45px (56px - 20%)
+                      // Position offsets
                       const leftPosition = diff === 0 ? 0 : (diff === 1 ? 45 : 90);
                       
                       return (
@@ -102,8 +121,8 @@ function Testimonials() {
                           className="absolute transition-all duration-300"
                           style={{
                             left: `${leftPosition}px`,
-                            zIndex: 15 - diff, // Current image has highest z-index
-                            opacity: diff === 0 ? 1 : 0.7 // Current image 100% visible, others faded
+                            zIndex: 15 - diff,
+                            opacity: diff === 0 ? 1 : 0.7
                           }}
                         >
                           <div className="w-14 h-14 rounded-full overflow-hidden">
@@ -113,7 +132,6 @@ function Testimonials() {
                               width={56}
                               height={56}
                               className="object-cover w-full h-full"
-                              style={{ width: '100%', height: '100%' }}
                             />
                           </div>
                         </div>
@@ -123,7 +141,7 @@ function Testimonials() {
                 </div>
 
                 {/* Navigation Arrows - Right Side */}
-                <div className="navigation-arrows flex gap-3">
+                <div className="navigation-arrows flex gap-3 relative z-50">
                   <button 
                     onClick={handlePrev}
                     className="navigation-arrow flex items-center justify-center transition-all"
@@ -158,24 +176,52 @@ function Testimonials() {
                 </div>
               </div>
 
-              {/* Quote Content */}
-              <div>
-                <p className="text-[#231F20] text-sm leading-[1.6] mb-6">
-                  "{testimonials[currentIndex].quote}"
-                </p>
-                <div>
-                  <h3 className="text-[#231F20] text-sm font-semibold">
-                    {testimonials[currentIndex].name}
-                  </h3>
-                  <p className="text-[#231F20]/60 text-sm">
-                    {testimonials[currentIndex].designation}
-                  </p>
+              {/* Quote Content - Fixed height container */}
+              <div className="relative overflow-hidden h-[155px]">
+                <div 
+                  className={`w-full transition-all duration-300 ${animation} h-full flex flex-col`}
+                >
+                  {/* Quote paragraph with fixed height and scrollable if needed */}
+                  <div className="overflow-y-auto">
+                    <p className="text-[#231F20] text-sm leading-[1.6] mb-6 break-words">
+                      &quot;{testimonialData[currentIndex].quote}&quot;
+                    </p>
+                  </div>
+                  {/* Author info - slightly increased spacing */}
+                  <div>
+                    <h3 className="text-[#231F20] text-sm font-semibold">
+                      {testimonialData[currentIndex].name}
+                    </h3>
+                    <p className="text-[#231F20]/60 text-sm">
+                      {testimonialData[currentIndex].designation}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      {/* CSS for animations */}
+      <style jsx>{`
+        .slide-out-left {
+          transform: translateX(60%);
+          opacity: 0;
+        }
+        .slide-in-right {
+          transform: translateX(0%);
+          opacity: 1;
+        }
+        .slide-out-right {
+          transform: translateX(-60%);
+          opacity: 0;
+        }
+        .slide-in-left {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      `}</style>
     </div>
   )
 }

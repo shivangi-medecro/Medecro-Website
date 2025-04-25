@@ -72,7 +72,7 @@ function DoctorSearch() {
                       height={20}
                       className="mr-3 "
                     />
-                    <span className="text-gray-400 text-base">Doctor's Category</span>
+                    <span className="text-gray-400 text-base">Doctor&apos;s Category</span>
                     <Image 
                       src="/DoctorSearch/polygon.png" 
                       alt="Expand"

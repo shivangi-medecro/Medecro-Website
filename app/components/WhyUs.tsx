@@ -57,7 +57,7 @@ function WhyUs() {
             </div>
             <div className="relative z-10 p-10 text-white">
               <p className="text-xl leading-relaxed">
-                Experience the transformative power of AI in healthcare with solutions tailored to your clinic's unique needs
+                Experience the transformative power of AI in healthcare with solutions tailored to your clinic&apos;s unique needs
               </p>
             </div>
           </div>
