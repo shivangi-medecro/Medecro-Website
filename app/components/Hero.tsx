@@ -84,13 +84,13 @@ export function Hero1() {
                                     {/* Second bubble - All corners rounded except bottom-right */}
                                     <div className="bg-white p-5 rounded-[24px] rounded-br-none shadow-md">
                                         <p className="text-[#231F20] text-xs">
-                                            Could you please confirm if this is a routine cleaning or if you're experiencing any specific concerns?
+                                            Could you please confirm if this is a routine cleaning or if you&apos;re experiencing any specific concerns?
                                         </p>
                                     </div>
 
                                     {/* AI image just below the chat bubbles */}
                                     <div className="w-[55px] h-[55px]  self-end">
-                                        <img src="/Hero/ai.png" alt="AI Assistant" className="w-full h-full object-contain" />
+                                        <Image src="/Hero/ai.png" alt="AI Assistant" width={55} height={55} className="object-contain" />
                                     </div>
                                 </div>
 
@@ -185,13 +185,13 @@ export function Hero2() {
                                     {/* Second bubble - All corners rounded except bottom-right */}
                                     <div className="bg-white p-5 rounded-[24px] rounded-br-none shadow-md">
                                         <p className="text-[#231F20] text-xs">
-                                            Could you please confirm if this is a routine cleaning or if you're experiencing any specific concerns?
+                                            Could you please confirm if this is a routine cleaning or if you&apos;re experiencing any specific concerns?
                                         </p>
                                     </div>
 
                                     {/* AI image just below the chat bubbles */}
                                     <div className="w-[55px] h-[55px]  self-end">
-                                        <img src="/Hero/ai.png" alt="AI Assistant" className="w-full h-full object-contain" />
+                                        <Image src="/Hero/ai.png" alt="AI Assistant" width={55} height={55} className="object-contain" />
                                     </div>
                                 </div>
 
@@ -287,13 +287,13 @@ export function Hero3() {
                                     {/* Second bubble - All corners rounded except bottom-right */}
                                     <div className="bg-white p-5 rounded-[24px] rounded-br-none shadow-md">
                                         <p className="text-[#231F20] text-xs">
-                                            Could you please confirm if this is a routine cleaning or if you're experiencing any specific concerns?
+                                            Could you please confirm if this is a routine cleaning or if you&apos;re experiencing any specific concerns?
                                         </p>
                                     </div>
 
                                     {/* AI image just below the chat bubbles */}
                                     <div className="w-[55px] h-[55px]  self-end">
-                                        <img src="/Hero/ai.png" alt="AI Assistant" className="w-full h-full object-contain" />
+                                        <Image src="/Hero/ai.png" alt="AI Assistant" width={55} height={55} className="object-contain" />
                                     </div>
                                 </div>
 
@@ -388,13 +388,13 @@ export function Hero4() {
                                     {/* Second bubble - All corners rounded except bottom-right */}
                                     <div className="bg-white p-5 rounded-[24px] rounded-br-none shadow-md">
                                         <p className="text-[#231F20] text-xs">
-                                            Could you please confirm if this is a routine cleaning or if you're experiencing any specific concerns?
+                                            Could you please confirm if this is a routine cleaning or if you&apos;re experiencing any specific concerns?
                                         </p>
                                     </div>
 
                                     {/* AI image just below the chat bubbles */}
                                     <div className="w-[55px] h-[55px]  self-end">
-                                        <img src="/Hero/ai.png" alt="AI Assistant" className="w-full h-full object-contain" />
+                                        <Image src="/Hero/ai.png" alt="AI Assistant" width={55} height={55} className="object-contain" />
                                     </div>
                                 </div>
 

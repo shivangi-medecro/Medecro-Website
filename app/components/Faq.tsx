@@ -45,12 +45,12 @@ function Faq() {
   
   const faqItems: FaqItem[] = [
     {
-      question: "Can I add new information to a patient's record?",
-      answer: "Yes, you can add new information to a patient's record, including medical notes, test results, and updates. Simply go to the patient's profile and use the 'Edit' option to enter the new details."
+      question: "Can I add new information to a patient&apos;s record?",
+      answer: "Yes, you can add new information to a patient&apos;s record, including medical notes, test results, and updates. Simply go to the patient&apos;s profile and use the &apos;Edit&apos; option to enter the new details."
     },
     {
-      question: "Can I edit or update a patient's medical history?",
-      answer: "Yes, you can edit or update a patient's medical history by accessing their profile and using the edit functionality."
+      question: "Can I edit or update a patient&apos;s medical history?",
+      answer: "Yes, you can edit or update a patient&apos;s medical history by accessing their profile and using the edit functionality."
     },
     {
       question: "How do I assign roles to team members in my practice?",
@@ -93,8 +93,8 @@ function Faq() {
               <p className="text-sm mb-8">Visit our Frequently Asked Questions to find helpful information.</p>
               </div>
               <div className="mb-5 border border-[#AFAFAF] rounded-3xl p-4">
-                <h3 className="font-semibold mb-1">Can't locate the answers you need?</h3>
-                <p className="text-sm text-[#5A5A5A]">We're here to help with any questions you have!</p>
+                <h3 className="font-semibold mb-1">Can&apos;t locate the answers you need?</h3>
+                <p className="text-sm text-[#5A5A5A]">We&apos;re here to help with any questions you have!</p>
 
                 <div className='pt-4'>
                 <p className="text-sm font-medium mb-2">Ask Your Question</p>

@@ -33,7 +33,7 @@ function HealthcarePower() {
               </p>
 
               <p className="text-[#231F20] font-semibold text-[1.1rem] mb-4">
-                Join us in our journey and let's revolutionize healthcare.
+                Join us in our journey and let&apos;s revolutionize healthcare.
               </p>
 
               <Link 

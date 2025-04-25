@@ -50,7 +50,7 @@ function Solutions() {
             />
             <h3 className="text-lg font-medium mb-2 w-40">Seamless Integration</h3>
             <p className="text-gray-600 mb-4 text-xs">
-              Flexible AI solutions that adapt to your clinic's unique workflows and requirements.
+              Flexible AI solutions that adapt to your clinic&apos;s unique workflows and requirements.
             </p>
             <a href="#" className="text-[#0316FF] text-sm underline decoration-[0.5px] underline-offset-8">Learn More</a>
             {/* Separator */}

@@ -184,7 +184,7 @@ function Testimonials() {
                   {/* Quote paragraph with fixed height and scrollable if needed */}
                   <div className="overflow-y-auto">
                     <p className="text-[#231F20] text-sm leading-[1.6] mb-6 break-words">
-                      "{testimonialData[currentIndex].quote}"
+                      &quot;{testimonialData[currentIndex].quote}&quot;
                     </p>
                   </div>
                   {/* Author info - slightly increased spacing */}
