@@ -20,7 +20,7 @@ function page() {
   return (
     <div className="min-h-screen">
       <Navbar />
-      <main className="pt-12 sm:p-4 "> 
+      <main className="pt-12"> 
         {/* <Hero /> */}
         <HeroCarousel />
         <Statistics />
