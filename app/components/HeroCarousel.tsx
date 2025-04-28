@@ -24,7 +24,7 @@ function HeroCarousel() {
                 }}
                 autoplay={{
                     delay: 5000,
-                    disableOnInteraction: false,
+                    disableOnInteraction: true,
                 }}
                 loop={true}
                 className="hero-swiper"

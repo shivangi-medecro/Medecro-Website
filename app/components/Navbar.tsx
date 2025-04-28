@@ -57,7 +57,7 @@ const Navbar = () => {
                 </svg>
               </button>
               {isProductsOpen && (
-                <div className="absolute right-0 mt-2 w-50 bg-white rounded-2xl shadow-lg p-2">
+                <div className="absolute right-0 mt-2 w-48 bg-white rounded-2xl shadow-lg p-2">
                   <Link href="/doctors-dashboard" className="block px-4 py-1 text-black hover:bg-[#E8EAFF] rounded-xl">
                     Doctor&apos;s Dashboard
                   </Link>
