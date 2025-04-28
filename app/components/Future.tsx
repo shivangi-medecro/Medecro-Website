@@ -15,7 +15,7 @@ function Future() {
                 <span className="text-[#0316FF]">Future of<br />Healthcare</span>
               </h2>
               
-              <p className="text-[#231F20] text-[0.925rem] mb-7">
+              <p className="text-[#231F20] text-[0.9rem] font-light mb-7">
                 Check how Medecro revolutionizes healthcare with AI-powered tools,
                 seamless consultations, and automated workflows for better efficiency.
               </p>

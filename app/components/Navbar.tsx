@@ -57,14 +57,14 @@ const Navbar = () => {
                 </svg>
               </button>
               {isProductsOpen && (
-                <div className="absolute right-0 mt-2 w-48 bg-white rounded-2xl shadow-lg p-2">
-                  <Link href="/doctors-dashboard" className="block px-4 py-1 text-black hover:bg-[#E8EAFF] rounded-xl">
+                <div className="absolute right-0 mt-2 w-48 bg-white rounded-xl shadow-lg p-2">
+                  <Link href="/doctors-dashboard" className="block px-4 py-1 text-black hover:bg-[#E8EAFF] rounded-lg">
                     Doctor&apos;s Dashboard
                   </Link>
-                  <Link href="/doctors-app" className="block px-4 py-1 text-black hover:bg-[#E8EAFF] rounded-xl">
+                  <Link href="/doctors-app" className="block px-4 py-1 text-black hover:bg-[#E8EAFF] rounded-lg">
                     Doctor&apos;s App
                   </Link>
-                  <Link href="/patients-app" className="block px-4 py-1 text-black hover:bg-[#E8EAFF] rounded-xl">
+                  <Link href="/patients-app" className="block px-4 py-1 text-black hover:bg-[#E8EAFF] rounded-lg">
                     Patient&apos;s App
                   </Link>
                 </div>

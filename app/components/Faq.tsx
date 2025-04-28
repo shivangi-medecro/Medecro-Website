@@ -45,12 +45,12 @@ function Faq() {
   
   const faqItems: FaqItem[] = [
     {
-      question: "Can I add new information to a patient&apos;s record?",
-      answer: "Yes, you can add new information to a patient&apos;s record, including medical notes, test results, and updates. Simply go to the patient&apos;s profile and use the &apos;Edit&apos; option to enter the new details."
+      question: "Can I add new information to a patient's record?",
+      answer: "Yes, you can add new information to a patient's record, including medical notes, test results, and updates. Simply go to the patient's profile and use the, Edit option to enter the new details."
     },
     {
-      question: "Can I edit or update a patient&apos;s medical history?",
-      answer: "Yes, you can edit or update a patient&apos;s medical history by accessing their profile and using the edit functionality."
+      question: "Can I edit or update a patient's medical history?",
+      answer: "Yes, you can edit or update a patient's medical history by accessing their profile and using the edit functionality."
     },
     {
       question: "How do I assign roles to team members in my practice?",

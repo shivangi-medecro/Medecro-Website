@@ -6,7 +6,7 @@ function Statistics() {
     <section className="bg-white py-24">
       <div className="container mx-auto px-6 lg:px-36 relative">
         {/* Background design */}
-        <div className="absolute -top-18 right-26">
+        <div className="absolute -top-16  right-28 ">
           <Image
             src="/Statistics/rainbow.png"
             alt="Background design"

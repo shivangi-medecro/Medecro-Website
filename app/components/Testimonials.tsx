@@ -204,7 +204,7 @@ function Testimonials() {
       </div>
 
       {/* CSS for animations */}
-      <style jsx>{`
+      <style>{`
         .slide-out-left {
           transform: translateX(60%);
           opacity: 0;

@@ -17,7 +17,7 @@ function Products() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {/* Product 1 */}
             <div className="text-center flex flex-col items-center">
-              <div className="mb-8 w-[280px] h-[280px] relative">
+              <div className="-mt-4 mb-10 w-[285px] h-[285px] relative">
                 <Image
                   src="/products/product1.png"
                   alt="Your Practice, Your Control"
@@ -63,7 +63,7 @@ function Products() {
 
             {/* Product 3 */}
             <div className="text-center flex flex-col items-center">
-              <div className="mb-8 w-[280px] h-[280px] relative">
+              <div className="mb-10 w-[280px] h-[275px] relative">
                 <Image
                   src="/products/product3.png"
                   alt="Where Patients Find You"

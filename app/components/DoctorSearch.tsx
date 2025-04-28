@@ -6,7 +6,7 @@ function DoctorSearch() {
     <div className="w-full font-outfit relative">
       <div className="absolute inset-0 bg-gradient-to-b from-[#CBE3FF]/80 to-white" />
       
-      <div className="container mx-auto px-6 py-20 pb-50 relative">
+      <div className="container mx-auto px-6 py-20 pb-52 relative">
         <div className="flex items-center justify-between max-w-[1000px] mx-auto">
           <div className="max-w-[500px]">
             <h2 className="text-[2.75rem] leading-[1.2] font-bold mb-3">

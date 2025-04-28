@@ -42,8 +42,8 @@ function Profits() {
 
   return (
     <div className="w-full py-20 font-outfit bg-white">
-      <div className="container mx-auto px-6">
-        <div className="max-w-[1200px] mx-auto">
+      <div className="container mx-auto px-10">
+        <div className=" mx-auto">
           {/* Heading */}
           <div className="text-center mb-16">
             <h2 className="text-[#231F20] text-base tracking-[0.18em] uppercase mb-3">T U R N &nbsp; Y O U R &nbsp; E X P E R T I S E &nbsp; I N T O &nbsp; M O R E &nbsp; P R O F I T S</h2>
