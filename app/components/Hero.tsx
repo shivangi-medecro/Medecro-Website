@@ -17,7 +17,7 @@ function HeroSection({
     titleBlack, 
     titleBlackSpan = "", 
     features,
-    chatBubblePosition = "right-0" 
+    chatBubblePosition = "right-6" 
 }: HeroSectionProps) {
     return (
         <div className="relative w-full min-h-screen bg-[#f6f9fd] overflow-hidden font-outfit">
