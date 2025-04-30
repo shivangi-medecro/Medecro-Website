@@ -9,7 +9,7 @@ function Products() {
         <div className="max-w-[64rem] mx-auto">
           {/* Heading */}
           <div className="text-center mb-10">
-            <h2 className="text-[#231F20] text-sm tracking-[0.15em] uppercase mb-3">O U R &nbsp;&nbsp; P R O D U C T S</h2>
+            <h2 className="text-[#231F20] text-sm 2xl:text-xl tracking-[0.15em] uppercase mb-3">O U R &nbsp;&nbsp; P R O D U C T S</h2>
             <div className="w-[90%] max-w-[900px] h-[1px] bg-gray-300 mx-auto"></div>
           </div>
 

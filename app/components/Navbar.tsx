@@ -15,7 +15,7 @@ const Navbar = () => {
           <Image src="/logo.png" alt="Medecro Logo" width={150} height={40} />
         </Link>
 
-        <div className="flex items-center text-sm">
+        <div className="flex items-center text-sm 2xl:text-base">
           <div className="flex items-center space-x-8">
             <Link 
               href="/vision" 

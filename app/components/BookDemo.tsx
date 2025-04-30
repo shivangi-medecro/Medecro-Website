@@ -22,8 +22,8 @@ function BookDemo() {
           
           {/* Right side - Form */}
           <div className="md:w-1/2">
-            <h2 className="text-4xl font-bold mb-12">Book a Demo</h2>
-            <p className="uppercase text-xs font-medium mb-6 tracking-wider text-black">FILL&nbsp; OUT&nbsp; THE&nbsp; FORM&nbsp; BELOW&nbsp; TO&nbsp; BOOK&nbsp; A&nbsp; DEMO</p>
+            <h2 className="text-4xl 2xl:text-5xl font-bold mb-12">Book a Demo</h2>
+            <p className="uppercase text-xs 2xl:text-sm font-medium mb-6 tracking-wider text-black">FILL&nbsp; OUT&nbsp; THE&nbsp; FORM&nbsp; BELOW&nbsp; TO&nbsp; BOOK&nbsp; A&nbsp; DEMO</p>
             
             <form className="space-y-5">
               {/* Full Name */}

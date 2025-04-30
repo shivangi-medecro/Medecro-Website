@@ -23,7 +23,7 @@ const Footer = () => {
           <div className="h-8 w-[1px] bg-white/20 -mr-14"></div>
 
           {/* Navigation Links */}
-          <div className="flex items-center space-x-6 mx-10 text-xs">
+          <div className="flex items-center space-x-6 mx-10 text-xs 2xl:text-sm">
             <Link href="/" className="text-[#00EF88] hover:opacity-80">Home</Link>
             <Link href="/vision" className="hover:text-[#00EF88]">Vision</Link>
             <Link href="/career" className="hover:text-[#00EF88]">Career</Link>
@@ -35,16 +35,24 @@ const Footer = () => {
           {/* Social Icons */}
           <div className="flex items-center space-x-8">
             <Link href="#" className="hover:opacity-80">
-              <Image src="/Footer/facebook.png" alt="Facebook" width={18} height={18} />
+              <div className="w-[18px] h-[18px] 2xl:w-[22px] 2xl:h-[22px] relative">
+                <Image src="/Footer/facebook.png" alt="Facebook" fill className="object-contain" />
+              </div>
             </Link>
             <Link href="#" className="hover:opacity-80">
-              <Image src="/Footer/instagram.png" alt="Instagram" width={18} height={18} />
+              <div className="w-[18px] h-[18px] 2xl:w-[22px] 2xl:h-[22px] relative">
+                <Image src="/Footer/instagram.png" alt="Instagram" fill className="object-contain" />
+              </div>
             </Link>
             <Link href="#" className="hover:opacity-80">
-              <Image src="/Footer/linkedin.png" alt="LinkedIn" width={18} height={18} />
+              <div className="w-[18px] h-[18px] 2xl:w-[22px] 2xl:h-[22px] relative">
+                <Image src="/Footer/linkedin.png" alt="LinkedIn" fill className="object-contain" />
+              </div>
             </Link>
             <Link href="#" className="hover:opacity-80">
-              <Image src="/Footer/twitter.png" alt="Twitter" width={18} height={18} />
+              <div className="w-[18px] h-[18px] 2xl:w-[22px] 2xl:h-[22px] relative">
+                <Image src="/Footer/twitter.png" alt="Twitter" fill className="object-contain" />
+              </div>
             </Link>
           </div>
         </div>
@@ -56,7 +64,7 @@ const Footer = () => {
         <div className="flex items-center">
           {/* Address */}
           <div className="w-[300px]">
-            <p className="text-[10px] text-white/80">
+            <p className="text-[10px] text-white/80 2xl:text-xs">
               TR-406, 4th Floor A11F Coworking,<br />
               Plot No. 21 & 21A, Sector 142, Noida-201304
             </p>
@@ -69,17 +77,21 @@ const Footer = () => {
           <div className="flex-1 flex items-center justify-between">
             <div className="flex items-center gap-8">
               <div className="flex items-center space-x-2">
-                <Image src="/Footer/phone.png" alt="Phone" width={18} height={18} />
-                <span className="text-xs text-white/80">+91 93405 05933</span>
+                <div className="w-[18px] h-[18px] 2xl:w-[22px] 2xl:h-[22px] relative">
+                  <Image src="/Footer/phone.png" alt="Phone" fill className="object-contain" />
+                </div>
+                <span className="text-xs text-white/80 2xl:text-sm">+91 93405 05933</span>
               </div>
               <div className="flex items-center space-x-2">
-                <Image src="/Footer/email.png" alt="Email" width={18} height={18} />
-                <span className="text-xs text-white/80">medecro.ai123@gmail.com</span>
+                <div className="w-[18px] h-[18px] 2xl:w-[22px] 2xl:h-[22px] relative">
+                  <Image src="/Footer/email.png" alt="Email" fill className="object-contain" />
+                </div>
+                <span className="text-xs text-white/80 2xl:text-sm">medecro.ai123@gmail.com</span>
               </div>
             </div>
 
             {/* Copyright */}
-            <div className="text-[10px] text-white/80 text-right">
+            <div className="text-[10px] text-white/80 text-right 2xl:text-xs">
               <p>©2024 Medecro.ai | All Rights Reserved</p>
               <p className="mt-1">MEDECRO TECHNOLOGIES PRIVATE LIMITED</p>
             </div>

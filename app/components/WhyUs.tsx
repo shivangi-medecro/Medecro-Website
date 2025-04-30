@@ -28,11 +28,11 @@ function WhyUs() {
         <div className="flex flex-col lg:flex-row items-center justify-center  px-6">
           {/* Left content with heading */}
           <div className="flex flex-col items-center text-white lg:max-w-[380px] text-center ">
-            <h2 className="text-4xl font-bold mb-10 text-center">Why Choose Medecro.ai?</h2>
+            <h2 className="text-4xl 2xl:text-5xl font-bold mb-10 text-center">Why Choose Medecro.ai?</h2>
             
             <Link 
               href="#contact" 
-              className="inline-flex items-center px-4 py-2.5 bg-white text-black rounded-full text-xs hover:bg-opacity-80 transition-colors mr-4 hover:bg-white/80"
+              className="inline-flex items-center px-4 py-2.5 bg-white text-black rounded-full text-xs 2xl:text-sm hover:bg-opacity-80 transition-colors mr-4 hover:bg-white/80"
             >
               Contact Us to Learn More
               <Image 
@@ -46,7 +46,7 @@ function WhyUs() {
           </div>
           
           {/* Right content with text in image border */}
-          <div className="lg:max-w-[38rem] relative">
+          <div className="lg:max-w-[38rem] 2xl:max-w-[45rem] relative">
             <div className="absolute inset-0 z-0">
               <Image 
                 src="/WhyUs/rectangle.png" 
@@ -56,7 +56,7 @@ function WhyUs() {
               />
             </div>
             <div className="relative z-10 p-10 text-white">
-              <p className="text-xl leading-relaxed">
+              <p className="text-xl 2xl:text-2xl leading-relaxed">
                 Experience the transformative power of AI in healthcare with solutions tailored to your clinic&apos;s unique needs
               </p>
             </div>

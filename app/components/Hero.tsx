@@ -17,7 +17,7 @@ function HeroSection({
     titleBlack, 
     titleBlackSpan = "", 
     features,
-    chatBubblePosition = "right-6" 
+    chatBubblePosition = "right-6 2xl:right-10" 
 }: HeroSectionProps) {
     return (
         <div className="relative w-full min-h-screen bg-[#f6f9fd] overflow-hidden font-outfit">
@@ -38,7 +38,7 @@ function HeroSection({
                     <div className="flex flex-col md:flex-row items-center py-20">
                         {/* Left Content */}
                         <div className="md:w-1/2 ml-24">
-                            <div className="text-[44px] font-bold mb-6">
+                            <div className="text-[44px] 2xl:text-[50px]  font-bold mb-6">
                                 <h1 className="text-[#0316FF]">
                                     {titleBlue} {titleBlackSpan && <span className='text-[#231F20]'>{titleBlackSpan}</span>}
                                 </h1>
@@ -49,7 +49,7 @@ function HeroSection({
                                 {features.map((feature, index) => (
                                     <div key={index} className="flex items-start">
                                         <Image src="/Hero/tick.png" alt="Check" width={20} height={20} className="mt-1 mr-3" />
-                                        <p className="text-[#231F20] text-[15px]">{feature}</p>
+                                        <p className="text-[#231F20] text-[15px] 2xl:text-[18px]">{feature}</p>
                                     </div>
                                 ))}
                             </div>
@@ -83,17 +83,17 @@ function HeroSection({
 
                         {/* Right Content */}
                         <div className="md:w-1/2 relative flex items-center justify-end">
-                            <div className="relative h-[520px]" style={{ width: '400px' }}>
+                            <div className="relative h-[520px] " style={{ width: '420px'}}>
                                 {/* Chat bubbles - using fixed width container with absolute positioning */}
-                                <div className={`absolute -bottom-4 ${chatBubblePosition} flex flex-col space-y-3 max-w-[150px]`}>
+                                <div className={`absolute -bottom-4 ${chatBubblePosition} flex flex-col space-y-3 max-w-[150px] 2xl:max-w-[175px]`}>
                                     {/* First bubble - Only top-left corner not rounded */}
                                     <div className="bg-white py-3 px-5 rounded-[20px] rounded-tl-none shadow-md text-center">
-                                        <p className="text-[#231F20] font-medium text-xs">Ask AI Assistant?</p>
+                                        <p className="text-[#231F20] font-medium text-xs 2xl:text-sm">Ask AI Assistant?</p>
                                     </div>
 
                                     {/* Second bubble - All corners rounded except bottom-right */}
                                     <div className="bg-white p-5 rounded-[24px] rounded-br-none shadow-md">
-                                        <p className="text-[#231F20] text-xs">
+                                        <p className="text-[#231F20] text-xs 2xl:text-sm">
                                             Could you please confirm if this is a routine cleaning or if you&apos;re experiencing any specific concerns?
                                         </p>
                                     </div>
@@ -113,73 +113,74 @@ function HeroSection({
 }
 
 export function Hero1() {
-    return (
-        <HeroSection 
-            backgroundImage="/Hero/bg1.png"
-            titleBlue="AI-powered"
-            titleBlack="Dental X-Ray Analyzer"
-            features={[
-                "Instantly detect cavities, fractures, and anomalies with AI precision.",
-                "Reduce human error and enhance diagnostic accuracy.",
-                "Accelerate treatment planning with automated image analysis."
-            ]}
-        />
-    )
+	return (
+			<HeroSection 
+					backgroundImage="/Hero/bg1.png"
+					titleBlue="AI-powered"
+					titleBlack="Dental X-Ray Analyzer"
+					features={[
+							"Instantly detect cavities, fractures, and anomalies with AI precision.",
+							"Reduce human error and enhance diagnostic accuracy.",
+							"Accelerate treatment planning with automated image analysis."
+					]}
+			/>
+	)
 }
 
 export function Hero2() {
-    return (
-        <HeroSection 
-            backgroundImage="/Hero/bg2.png"
-            titleBlue="AI-powered"
-            titleBlackSpan="Clinic"
-            titleBlack="Management System."
-            features={[
-                "Streamline patient records, appointments, and billing with AI automation.",
-                "Reduce administrative burden, improving clinic efficiency.",
-                "Enhance patient experience with seamless digital workflows."
-            ]}
-        />
-    )
+	return (
+			<HeroSection 
+					backgroundImage="/Hero/bg2.png"
+					titleBlue="AI-powered"
+					titleBlackSpan="Clinic"
+					titleBlack="Management System."
+					features={[
+							"Streamline patient records, appointments, and billing with AI automation.",
+							"Reduce administrative burden, improving clinic efficiency.",
+							"Enhance patient experience with seamless digital workflows."
+					]}
+			/>
+	)
 }
 
 export function Hero3() {
-    return (
-        <HeroSection 
-            backgroundImage="/Hero/bg3.png"
-            titleBlue="Your AI Dental"
-            titleBlack="Assistant"
-            features={[
-                "Automate routine tasks and focus on patient care.",
-                "Get AI-powered insights for better clinical decisions.",
-                "Improve workflow efficiency with smart automation."
-            ]}
-        />
-    )
+	return (
+			<HeroSection 
+					backgroundImage="/Hero/bg3.png"
+					titleBlue="Your AI Dental"
+					titleBlack="Assistant"
+					features={[
+							"Automate routine tasks and focus on patient care.",
+							"Get AI-powered insights for better clinical decisions.",
+							"Improve workflow efficiency with smart automation."
+					]}
+			/>
+	)
 }
 
 export function Hero4() {
-    return (
-        <HeroSection 
-            backgroundImage="/Hero/bg4.png"
-            titleBlue="24/7 AI-Powered"
-            titleBlack="Teleconsultations."
-            features={[
-                "Remote consultations anytime, anywhere.",
-                "Secure, AI-assisted diagnosis and treatment planning.",
-                "Expand your reach and offer seamless virtual care."
-            ]}
-        />
-    )
+	return (
+			<HeroSection 
+					backgroundImage="/Hero/bg4.png"
+					titleBlue="24/7 AI-Powered"
+					titleBlack="Teleconsultations."
+					features={[
+							"Remote consultations anytime, anywhere.",
+							"Secure, AI-assisted diagnosis and treatment planning.",
+							"Expand your reach and offer seamless virtual care."
+					]}
+			/>
+	)
 }
 
-export default function Hero() {
-    return (
-        <>
-            <Hero1 />
-            <Hero2 />
-            <Hero3 />
-            <Hero4 />
-        </>
-    )
-}
+
+// export default function Hero() {
+//     return (
+//         <>
+//             <Hero1 />
+//             <Hero2 />
+//             <Hero3 />
+//             <Hero4 />
+//         </>
+//     )
+// }
