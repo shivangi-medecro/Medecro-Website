@@ -57,8 +57,8 @@ const blogPosts = [
 
 function Blog() {
   return (
-    <div className="w-full bg-[#1E1E1E] pt-80 pb-20">
-      <div className="container mx-auto px-4">
+    <div className="w-full bg-[#1E1E1E] pt-80 max-lg:pt-80 pb-20">
+      <div className="container mx-auto px-4 max-lg:px-0">
         <div className=" mx-auto">
           {/* Header */}
           <div className="flex justify-between items-center mb-20">
@@ -80,7 +80,7 @@ function Blog() {
 
           {/* Blog Posts Carousel */}
           <div className="relative blog-carousel-container">
-            <div className="px-12">
+            <div className="px-12 max-lg:px-0">
               <Swiper
                 modules={[Navigation]}
                 spaceBetween={32}
@@ -157,10 +157,10 @@ function Blog() {
             </div>
             
             {/* Custom Navigation with > and < symbols */}
-            <div className="blog-button-prev absolute top-1/2 left-0 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-white/20 rounded-full cursor-pointer hover:bg-white/30 transition-all">
+            <div className="blog-button-prev absolute top-1/2 max-lg:top-[45%] left-0 max-lg:-left-14 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-white/20 rounded-full cursor-pointer hover:bg-white/30 transition-all">
               <span className="text-white/70 text-xl font-medium">&lt;</span>
             </div>
-            <div className="blog-button-next absolute top-1/2 right-0 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-white/20 rounded-full cursor-pointer hover:bg-white/30 transition-all">
+            <div className="blog-button-next absolute max-lg:top-[45%] top-1/2 right-0 max-lg:-right-14 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-white/20 rounded-full cursor-pointer hover:bg-white/30 transition-all">
               <span className="text-white/70 text-xl font-medium">&gt;</span>
             </div>
 

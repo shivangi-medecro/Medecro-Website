@@ -37,19 +37,19 @@ function HeroSection({
                 <div className="container mx-auto px-4 relative z-10">
                     <div className="flex flex-col md:flex-row items-center py-20">
                         {/* Left Content */}
-                        <div className="md:w-1/2 ml-24">
-                            <div className="text-[44px] 2xl:text-[50px]  font-bold mb-6">
+                        <div className="w-1/2 max-lg:min-w-[60%] ml-24 max-lg:ml-6">
+                            <div className=" max-lg:text-4xl text-[44px] 2xl:text-[50px]  font-bold mb-6  ">
                                 <h1 className="text-[#0316FF]">
                                     {titleBlue} {titleBlackSpan && <span className='text-[#231F20]'>{titleBlackSpan}</span>}
                                 </h1>
-                                <h1 className="text-[#231F20] -mt-2">{titleBlack}</h1>
+                                <h1 className="text-[#231F20] -mt-2 max-lg:mt-0">{titleBlack}</h1>
                             </div>
 
                             <div className="space-y-2 mb-8">
                                 {features.map((feature, index) => (
                                     <div key={index} className="flex items-start">
                                         <Image src="/Hero/tick.png" alt="Check" width={20} height={20} className="mt-1 mr-3" />
-                                        <p className="text-[#231F20] text-[15px] 2xl:text-[18px]">{feature}</p>
+                                        <p className="text-[#231F20] text-[15px] max-lg:text-[13px] 2xl:text-[18px]">{feature}</p>
                                     </div>
                                 ))}
                             </div>
@@ -82,7 +82,7 @@ function HeroSection({
                         </div>
 
                         {/* Right Content */}
-                        <div className="md:w-1/2 relative flex items-center justify-end">
+                        <div className="w-1/2 relative flex items-center justify-end">
                             <div className="relative h-[520px] " style={{ width: '420px'}}>
                                 {/* Chat bubbles - using fixed width container with absolute positioning */}
                                 <div className={`absolute -bottom-4 ${chatBubblePosition} flex flex-col space-y-3 max-w-[150px] 2xl:max-w-[175px]`}>
@@ -99,7 +99,7 @@ function HeroSection({
                                     </div>
 
                                     {/* AI image just below the chat bubbles */}
-                                    <div className="w-[55px] h-[55px] self-end">
+                                    <div className="w-[55px] h-[55px] max-lg:w-[45px] max-lg:h-[45px] self-end">
                                         <Image src="/Hero/ai.png" alt="AI Assistant" width={55} height={55} className="object-contain" />
                                     </div>
                                 </div>

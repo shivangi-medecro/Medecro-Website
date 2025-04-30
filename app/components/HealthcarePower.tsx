@@ -7,7 +7,7 @@ function HealthcarePower() {
     <div className="w-full py-14 2xl:py-20 font-outfit bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-[64rem] mx-auto">
-          <div className="flex flex-col lg:flex-row items-center justify-center lg:gap-12">
+          <div className="flex flex-row items-center justify-center lg:gap-12">
             {/* Left Image */}
             <div className="relative w-full lg:w-auto max-w-[17rem]">
               <Image
@@ -15,7 +15,7 @@ function HealthcarePower() {
                 alt="Medecro Healthcare"
                 width={300}
                 height={300}
-                className="object-contain"
+                className="object-contain max-lg:w-48"
               />
             </div>
 
@@ -26,13 +26,13 @@ function HealthcarePower() {
                 <span className="text-[#231F20]">of Healthcare!</span>
               </h2>
               
-              <p className="text-[#231F20] 2xl:text-xl font-medium text-[1rem] mb-4 2xl:mb-6">
+              <p className="text-[#231F20] max-lg:text-sm 2xl:text-xl font-medium text-[1rem] mb-4 2xl:mb-6">
                 Medecro boosts efficiency for Healthcare Organizations, NGOs, Clinics, and
                 Individuals with AI-powered automation. Streamline workflows, reduce admin tasks,
                 and enhance outcomes—reclaim valuable time for care.
               </p>
 
-              <p className="text-[#231F20] 2xl:text-xl font-semibold 2xl:font-bold text-[1.1rem] mb-4 2xl:mb-6">
+              <p className="text-[#231F20] max-lg:text-sm 2xl:text-xl font-semibold 2xl:font-bold text-[1.1rem] mb-4 2xl:mb-6">
                 Join us in our journey and let&apos;s revolutionize healthcare.
               </p>
 

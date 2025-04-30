@@ -3,10 +3,10 @@ import Image from 'next/image'
 
 function Statistics() {
   return (
-    <section className="bg-white py-24 2xl:py-32">
+    <section className="bg-white py-28 2xl:py-32">
       <div className="container mx-auto px-6 lg:px-36 2xl:px-52   relative">
         {/* Background design */}
-        <div className="absolute -top-16 2xl:-top-20  right-28 2xl:right-40 ">
+        <div className="absolute -top-16 2xl:-top-20  right-28 2xl:right-40 max-lg:-right-12">
           <Image
             src="/Statistics/rainbow.png"
             alt="Background design"

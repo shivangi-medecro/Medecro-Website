@@ -7,7 +7,7 @@ function Future() {
     <div className="w-full py-14 font-outfit bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-[64rem] 2xl:max-w-[80rem] mx-auto">
-          <div className="flex flex-col lg:flex-row items-center justify-center lg:gap-6">
+          <div className="flex flex-row items-center justify-center lg:gap-6">
             {/* Left Content */}
             <div className="max-w-[17rem] 2xl:max-w-[25rem] lg:ml-12">
               <h2 className="text-[2.2rem] 2xl:text-5xl leading-[1.2] 2xl:leading-[1.1]  font-bold mb-5">
@@ -30,7 +30,7 @@ function Future() {
             </div>
 
             {/* Right Image */}
-            <div className="relative flex-1 w-full lg:w-auto lg:max-w-[34rem] 2xl:max-w-[40rem]">
+            <div className="relative flex-1 w-full max-lg:max-w-[30rem] lg:w-auto lg:max-w-[34rem] 2xl:max-w-[40rem]">
               <div className="aspect-[16/10] relative rounded-2xl overflow-hidden">
                 <Image
                   src="/future.png"
