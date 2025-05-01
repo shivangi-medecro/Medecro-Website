@@ -68,14 +68,16 @@ function Testimonials() {
   }
 
   return (
-    <div className="w-full -mt-48 mb-[-16rem] max-lg:-mt-48 max-lg:mb-[-16rem]   relative z-10 ">
-      <div className="container mx-auto px-6 max-lg:px-0">
-        <div className="lg:max-w-[1100px] max-lg:max-w-[1000px] 2xl:max-w-[1300px] mx-auto bg-white rounded-2xl shadow-md py-16 2xl:py-20 px-36 max-lg:px-20">
-          <div className="flex justify-between items-center gap-20 ">
+    <div className="w-full -mt-48 mb-[-16rem] max-lg:-mt-48 max-lg:mb-[-16rem] relative z-10">
+      <div className="  mx-auto px-6 max-lg:px-0">
+        <div className=" max-md:max-w-[780px] lg:max-w-[1100px] max-lg:max-w-[1000px] 2xl:max-w-[1300px] mx-auto bg-white rounded-2xl shadow-md py-16 2xl:py-20 px-36 max-lg:px-20 max-md:py-8">
+          <div className="flex max-md:flex-col justify-between items-center gap-20">
             {/* Left Section - Title */}
             <div className='flex flex-col justify-center items-center'>
-              <p className="text-sm max-lg:text-xs 2xl:text-lg tracking-[0.25em] uppercase mb-5 max-lg:mb-3">T E S T I M O N I A L S</p>
-              <h2 className="text-[2.5rem] max-lg:text-[2rem] 2xl:text-[3rem] leading-[1.2] font-bold">
+              <p className="text-sm max-md:text-sm max-lg:text-xs 2xl:text-lg tracking-[0.25em] uppercase mb-5  max-lg:mb-3 ">T E S T I M O N I A L S</p>
+              
+              {/* Title for mobile screens */}
+              <h2 className="text-[2.5rem] max-md:hidden max-lg:text-[2rem] 2xl:text-[3rem] leading-[1.2] font-bold ">
                 <div className="text-[#231F20]">What Our</div>
                 <div className="flex items-center gap-2">
                   <span className="text-[#0316FF]">Clients</span>
@@ -83,10 +85,16 @@ function Testimonials() {
                 </div>
                 <div className="text-[#231F20]">About Us?</div>
               </h2>
+              
+              {/* Title for mobile screens */}
+              <h2 className="hidden max-md:block text-5xl leading-[1.2] font-bold text-center max-md:-mb-2">
+                <div className="text-[#231F20]">What Our <span className="text-[#0316FF]">Clients</span> <span className="text-[#231F20]">Think</span></div>
+                <div className="text-[#231F20]">About Us?</div>
+              </h2>
             </div>
 
             {/* Right Section - Content */}
-            <div className="flex-1">
+            <div className="flex-1 ">
               <div className="flex justify-between items-center w-full mb-8">
                 {/* Profile Images with fixed ring and comma */}
                 <div className="profile-carousel relative h-14 2xl:h-16 w-[120px] 2xl:w-[138px]">
@@ -179,22 +187,22 @@ function Testimonials() {
               </div>
 
               {/* Quote Content - Fixed height container */}
-              <div className="relative overflow-hidden h-[155px] max-lg:h-[140px] 2xl:h-[165px]">
+              <div className="relative overflow-hidden max-md:h-[130px] h-[155px] max-lg:h-[140px] 2xl:h-[165px]">
                 <div 
                   className={`w-full transition-all duration-300 ${animation} h-full flex flex-col`}
                 >
                   {/* Quote paragraph with fixed height and scrollable if needed */}
                   <div className="overflow-y-auto">
-                    <p className="text-[#231F20] text-sm max-lg:text-xs 2xl:text-base leading-[1.6] mb-6 break-words">
+                    <p className="text-[#231F20] max-md:text-sm text-sm max-lg:text-xs 2xl:text-base leading-[1.6] mb-6 break-words">
                       &quot;{testimonialData[currentIndex].quote}&quot;
                     </p>
                   </div>
                   {/* Author info - slightly increased spacing */}
                   <div>
-                    <h3 className="text-[#231F20] text-sm max-lg:text-xs 2xl:text-base font-semibold">
+                    <h3 className="text-[#231F20] max-md:text-sm text-sm max-lg:text-xs 2xl:text-base font-semibold">
                       {testimonialData[currentIndex].name}
                     </h3>
-                    <p className="text-[#231F20]/60 text-sm max-lg:text-xs 2xl:text-base">
+                    <p className="text-[#231F20]/60 max-md:text-sm text-sm max-lg:text-xs 2xl:text-base">
                       {testimonialData[currentIndex].designation}
                     </p>
                   </div>

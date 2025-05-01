@@ -42,18 +42,18 @@ function Profits() {
 
   return (
     <div className="w-full py-20 font-outfit bg-white">
-      <div className="container mx-auto px-10 max-lg:px-2">
-        <div className=" mx-auto">
+      <div className="container mx-auto px-10 max-lg:px-2 max-md:px-1">
+        <div className="mx-auto">
           {/* Heading */}
           <div className="text-center mb-16">
-            <h2 className="text-[#231F20] text-base max-lg:text-sm 2xl:text-xl tracking-[0.18em] uppercase mb-3">T U R N &nbsp; Y O U R &nbsp; E X P E R T I S E &nbsp; I N T O &nbsp; M O R E &nbsp; P R O F I T S</h2>
+            <h2 className="text-[#231F20] text-base max-md:text-[13px] max-lg:text-sm 2xl:text-xl tracking-[0.18em] max-md:tracking-[0.05em] uppercase mb-3">T U R N &nbsp; Y O U R &nbsp; E X P E R T I S E &nbsp; I N T O &nbsp; M O R E &nbsp; P R O F I T S</h2>
           </div>
 
           <div className="flex flex-col items-center">
-            {/* Cards - First Row (4 cards) */}
-            <div className="grid grid-cols-4 gap-4 mb-8 w-[90%] max-lg:w-[100%]">
+            {/* Desktop Layout: Row 1 (4 cards) and Row 2 (3 cards) */}
+            <div className="hidden md:grid md:grid-cols-4 gap-4 mb-8 w-[90%] max-lg:w-[100%]">
               {profitCards.slice(0, 4).map((card, index) => (
-                <div key={index} className="bg-white rounded-md relative w-full max-w-[250px] 2xl:max-w-[270px]  mx-auto">
+                <div key={index} className="bg-white rounded-md relative w-full max-w-[250px] 2xl:max-w-[270px] mx-auto">
                   <div className="absolute top-6 left-0 h-[180px] 2xl:h-[220px] flex">
                     <div className="w-[2px] bg-gray-200"></div>
                     <div className="w-[18px] bg-gradient-to-r from-gray-200/70 to-transparent"></div>
@@ -75,15 +75,14 @@ function Profits() {
               ))}
             </div>
 
-            {/* Cards - Second Row (3 cards, centered) */}
-            <div className="grid grid-cols-3 gap-4 max-w-[80%] mx-auto">
+            <div className="hidden md:grid md:grid-cols-3 gap-4 max-w-[80%] mx-auto">
               {profitCards.slice(4, 7).map((card, index) => (
-                <div key={index} className="bg-white rounded-md relative w-full max-w-[250px] 2xl:max-w-[270px]  mx-auto">
+                <div key={index} className="bg-white rounded-md relative w-full max-w-[250px] 2xl:max-w-[270px] mx-auto">
                   <div className="absolute top-6 left-0 h-[180px] 2xl:h-[220px] flex">
                     <div className="w-[2px] bg-gray-200"></div>
                     <div className="w-[18px] bg-gradient-to-r from-gray-200/70 to-transparent"></div>
                   </div>
-                  <div className="flex flex-col items-start p-6  pl-8 ">
+                  <div className="flex flex-col items-start p-6 pl-8">
                     <div className="mb-4 h-[60px] max-lg:h-[45px] flex items-center">
                       <Image
                         src={card.icon}
@@ -98,6 +97,107 @@ function Profits() {
                   </div>
                 </div>
               ))}
+            </div>
+
+            {/* Mobile Layout: 2-2-2-1 */}
+            <div className="md:hidden w-full max-w-full px-0 mx-auto ">
+              {/* First row: 2 cards */}
+              <div className="grid grid-cols-2 gap-14 mb-5">
+                {profitCards.slice(0, 2).map((card, index) => (
+                  <div key={index} className="bg-white rounded-md relative mx-auto  w-full">
+                    <div className="absolute top-6 left-0 h-[180px] flex">
+                      <div className="w-[2px] bg-gray-200"></div>
+                      <div className="w-[18px] bg-gradient-to-r from-gray-200/70 to-transparent"></div>
+                    </div>
+                    <div className="flex flex-col items-start p-4 pl-6 pr-2">
+                      <div className="mb-3 h-[45px] flex items-center">
+                        <Image
+                          src={card.icon}
+                          alt={card.title}
+                          width={40}
+                          height={40}
+                          className="object-contain"
+                        />
+                      </div>
+                      <h3 className="text-[#231F20] text-[18px] font-medium mb-2 leading-tight w-full">{card.title}</h3>
+                      <p className="text-[#231F20] text-[12px] leading-snug w-full">{card.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Second row: 2 cards */}
+              <div className="grid grid-cols-2 gap-14 mb-5">
+                {profitCards.slice(2, 4).map((card, index) => (
+                  <div key={index} className="bg-white rounded-md relative mx-auto  w-full">
+                    <div className="absolute top-6 left-0 h-[180px] flex">
+                      <div className="w-[2px] bg-gray-200"></div>
+                      <div className="w-[18px] bg-gradient-to-r from-gray-200/70 to-transparent"></div>
+                    </div>
+                    <div className="flex flex-col items-start p-4 pl-5 pr-2">
+                      <div className="mb-3 h-[45px] flex items-center">
+                        <Image
+                          src={card.icon}
+                          alt={card.title}
+                          width={40}
+                          height={40}
+                          className="object-contain"
+                        />
+                      </div>
+                      <h3 className="text-[#231F20] text-[18px] font-medium mb-2 leading-tight w-full">{card.title}</h3>
+                      <p className="text-[#231F20] text-[12px] leading-snug w-full">{card.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Third row: 2 cards */}
+              <div className="grid grid-cols-2 gap-14 mb-5">
+                {profitCards.slice(4, 6).map((card, index) => (
+                  <div key={index} className="bg-white rounded-md relative mx-auto  w-full">
+                    <div className="absolute top-6 left-0 h-[180px] flex">
+                      <div className="w-[2px] bg-gray-200"></div>
+                      <div className="w-[18px] bg-gradient-to-r from-gray-200/70 to-transparent"></div>
+                    </div>
+                    <div className="flex flex-col items-start p-4 pl-5 pr-2">
+                      <div className="mb-3 h-[45px] flex items-center">
+                        <Image
+                          src={card.icon}
+                          alt={card.title}
+                          width={40}
+                          height={40}
+                          className="object-contain"
+                        />
+                      </div>
+                      <h3 className="text-[#231F20] text-[18px] font-medium mb-2 leading-tight w-full">{card.title}</h3>
+                      <p className="text-[#231F20] text-[12px] leading-snug w-full">{card.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Fourth row: 1 card (centered) */}
+              <div className="flex justify-center">
+                <div className="bg-white rounded-md relative  w-[50%]">
+                  <div className="absolute top-6 left-0 h-[180px] flex">
+                    <div className="w-[2px] bg-gray-200"></div>
+                    <div className="w-[18px] bg-gradient-to-r from-gray-200/70 to-transparent"></div>
+                  </div>
+                  <div className="flex flex-col items-start p-4 pl-5 pr-2">
+                    <div className="mb-3 h-[45px] flex items-center">
+                      <Image
+                        src={profitCards[6].icon}
+                        alt={profitCards[6].title}
+                        width={40}
+                        height={40}
+                        className="object-contain"
+                      />
+                    </div>
+                    <h3 className="text-[#231F20] text-[18px] font-medium mb-2 leading-tight w-full">{profitCards[6].title}</h3>
+                    <p className="text-[#231F20] text-[12px] leading-snug w-full">{profitCards[6].description}</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

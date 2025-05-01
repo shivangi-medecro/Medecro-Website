@@ -5,9 +5,9 @@ function BookDemo() {
   return (
     <section className="py-20 bg-[#F8F8F8]">
       <div className="container mx-auto px-8 max-w-6xl">
-        <div className="flex flex-col md:flex-row justify-between ">
+        <div className="flex flex-col md:flex-row justify-between max-md:items-center ">
           {/* Left side - Image */}
-          <div className="md:w-1/2 flex items-center justify-center">
+          <div className="md:w-1/2 flex items-center justify-center max-md:hidden">
             <div className="relative">
               <div className="absolute -z-10 w-[80%] h-[90%] bottom-0 left-5 rounded-2xl bg-gradient-to-br from-[#00EF88] to-[#0316FF]"></div>
               <Image 
@@ -21,7 +21,7 @@ function BookDemo() {
           </div>
           
           {/* Right side - Form */}
-          <div className="md:w-1/2">
+          <div className="md:w-1/2 max-md:w-[80%] ">
             <h2 className="text-4xl 2xl:text-5xl font-bold mb-12">Book a Demo</h2>
             <p className="uppercase text-xs 2xl:text-sm font-medium mb-6 tracking-wider text-black">FILL&nbsp; OUT&nbsp; THE&nbsp; FORM&nbsp; BELOW&nbsp; TO&nbsp; BOOK&nbsp; A&nbsp; DEMO</p>
             

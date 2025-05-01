@@ -7,20 +7,20 @@ function HealthcarePower() {
     <div className="w-full py-14 2xl:py-20 font-outfit bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-[64rem] mx-auto">
-          <div className="flex flex-row items-center justify-center lg:gap-12">
+          <div className="flex flex-col md:flex-row items-center justify-center lg:gap-12">
             {/* Left Image */}
-            <div className="relative w-full lg:w-auto max-w-[17rem]">
+            <div className="relative w-full lg:w-auto max-w-[17rem] max-md:flex max-md:justify-center">
               <Image
                 src="/color-capsule.png"
                 alt="Medecro Healthcare"
                 width={300}
                 height={300}
-                className="object-contain max-lg:w-48"
+                className="object-contain max-lg:w-48 max-md:w-[174px]"
               />
             </div>
 
             {/* Right Content */}
-            <div className="lg:ml-6 max-w-[34rem] 2xl:max-w-[43rem]">
+            <div className="lg:ml-6 max-w-[34rem] 2xl:max-w-[43rem] max-md:text-center max-md:mt-6">
               <h2 className="text-[2.5rem] 2xl:text-5xl leading-[1.2] 2xl:leading-[1.2] font-bold mb-5">
                 <span className="text-[#0316FF]">Powering the Future</span><br />
                 <span className="text-[#231F20]">of Healthcare!</span>
@@ -36,13 +36,15 @@ function HealthcarePower() {
                 Join us in our journey and let&apos;s revolutionize healthcare.
               </p>
 
-              <Link 
-                href="#" 
-                className="inline-flex items-center px-5 py-3 text-sm 2xl:text-base rounded-full bg-[linear-gradient(145deg,#00EF88,#0316FF)] text-white hover:opacity-80"
-              >
-                Get in touch with us
-                <Image src="/capsule.png" alt="Contact" width={14} height={14} className="ml-2" />
-              </Link>
+              <div className="max-md:flex max-md:justify-center">
+                <Link 
+                  href="#" 
+                  className="inline-flex items-center px-5 py-3 text-sm 2xl:text-base rounded-full bg-[linear-gradient(145deg,#00EF88,#0316FF)] text-white hover:opacity-80"
+                >
+                  Get in touch with us
+                  <Image src="/capsule.png" alt="Contact" width={14} height={14} className="ml-2" />
+                </Link>
+              </div>
             </div>
           </div>
         </div>

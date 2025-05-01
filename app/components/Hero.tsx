@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import MobileSidebar from './MobileSidebar'
 
 interface HeroSectionProps {
     backgroundImage: string;
@@ -19,6 +20,12 @@ function HeroSection({
     features,
     chatBubblePosition = "right-6 2xl:right-10 max-md:-right-72 " 
 }: HeroSectionProps) {
+    const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false);
+
+    const toggleMobileSidebar = () => {
+        setIsMobileSidebarOpen(!isMobileSidebarOpen);
+    };
+
     return (
         <div className="relative w-full min-h-screen bg-[#f6f9fd] overflow-hidden font-outfit">
             <div>
@@ -105,13 +112,18 @@ function HeroSection({
                                     
                                     {/* Mobile Menu - Only visible on max-md screens, placed directly below AI image */}
                                     <div className="max-md:block hidden self-end mt-6">
-                                        <Image 
-                                            src="/mobile-menu.png" 
-                                            alt="Mobile Menu" 
-                                            width={45} 
-                                            height={45} 
-                                            className="object-contain" 
-                                        />
+                                        <button 
+                                            onClick={toggleMobileSidebar} 
+                                            className="focus:outline-none"
+                                        >
+                                            <Image 
+                                                src="/mobile-menu.png" 
+                                                alt="Mobile Menu" 
+                                                width={45} 
+                                                height={45} 
+                                                className="object-contain" 
+                                            />
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -119,6 +131,9 @@ function HeroSection({
                     </div>
                 </div>
             </div>
+
+            {/* Mobile Sidebar */}
+            <MobileSidebar isOpen={isMobileSidebarOpen} onClose={() => setIsMobileSidebarOpen(false)} />
         </div>
     )
 }

@@ -57,9 +57,9 @@ const blogPosts = [
 
 function Blog() {
   return (
-    <div className="w-full bg-[#1E1E1E] pt-80 max-lg:pt-80 pb-20">
-      <div className="container mx-auto px-4 max-lg:px-0">
-        <div className=" mx-auto">
+    <div className="w-full bg-[#1E1E1E] pt-80 max-lg:pt-80 pb-20 max-md:px-0">
+      <div className="max-md:w-[92%] mx-auto  px-4 max-lg:px-0">
+        <div className=" mx-auto ">
           {/* Header */}
           <div className="flex justify-between items-center mb-20">
             <div className="flex items-center gap-3">
@@ -80,10 +80,10 @@ function Blog() {
 
           {/* Blog Posts Carousel */}
           <div className="relative blog-carousel-container">
-            <div className="px-12 max-lg:px-0">
+            <div className="px-12 max-lg:px-0 max-md:px-3">
               <Swiper
                 modules={[Navigation]}
-                spaceBetween={32}
+                spaceBetween={24}
                 slidesPerView={4}
                 navigation={{
                   nextEl: '.blog-button-next',
@@ -102,7 +102,7 @@ function Blog() {
                       {/* Fixed height for title section to ensure alignment */}
                       <div className="space-y-1 h-32">
                         <p className="text-white text-sm mb-4">{post.date}</p>
-                        <h3 className="text-xl font-semibold text-white leading-snug line-clamp-2">
+                        <h3 className="text-xl font-semibold text-white leading-snug line-clamp-2 max-md:text-base">
                           {post.title}
                         </h3>
                       </div>
@@ -128,12 +128,12 @@ function Blog() {
                           
                           {(post.id === 2 || post.id === 5) && (
                             <div className="flex items-center gap-2">
-                              <Image
+                              {/* <Image
                                 src="/Blog/download.png"
                                 alt="Download"
                                 width={20}
                                 height={20}
-                              />
+                              /> */}
                               <Image
                                 src="/Blog/share.png"
                                 alt="Share"
@@ -145,7 +145,7 @@ function Blog() {
                         </div>
                         
                         {post.description && (
-                          <p className="text-white/80 text-sm leading-relaxed">
+                          <p className="text-white/80 text-sm max-md:text-xs leading-relaxed">
                             {post.description}
                           </p>
                         )}
@@ -157,10 +157,10 @@ function Blog() {
             </div>
             
             {/* Custom Navigation with > and < symbols */}
-            <div className="blog-button-prev absolute top-1/2 max-lg:top-[45%] left-0 max-lg:-left-14 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-white/20 rounded-full cursor-pointer hover:bg-white/30 transition-all">
+            <div className="blog-button-prev absolute top-1/2 max-lg:top-[45%] left-0 max-md:-left-8 max-lg:-left-14 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-white/20 rounded-full cursor-pointer hover:bg-white/30 transition-all">
               <span className="text-white/70 text-xl font-medium">&lt;</span>
             </div>
-            <div className="blog-button-next absolute max-lg:top-[45%] top-1/2 right-0 max-lg:-right-14 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-white/20 rounded-full cursor-pointer hover:bg-white/30 transition-all">
+            <div className="blog-button-next absolute max-lg:top-[45%] top-1/2 right-0 max-md:-right-8 max-lg:-right-14 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-white/20 rounded-full cursor-pointer hover:bg-white/30 transition-all">
               <span className="text-white/70 text-xl font-medium">&gt;</span>
             </div>
 

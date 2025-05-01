@@ -80,42 +80,51 @@ function Faq() {
 
   return (
     <section className="py-16 bg-white">
-      <div className="container mx-auto px-4 max-w-6xl max-lg:max-w-4xl">
-        <div className="flex justify-between">
+      <div className="container mx-auto px-4 max-w-6xl max-lg:max-w-4xl max-md:max-w-[80%]">
+        <div className="flex max-md:flex-col justify-between">
           {/* Left Column */}
           <div className="min-w-[45%] p-8">
-            <div >
-                <div className="max-w-[18rem]">
-              <h2 className="text-5xl max-lg:text-4xl 2xl:text-6xl font-extrabold mb-1">Frequently</h2>
-              <h2 className="text-5xl max-lg:text-4xl 2xl:text-6xl font-extrabold mb-1">Asked</h2>
-              <h2 className="text-5xl max-lg:text-4xl 2xl:text-6xl font-extrabold text-[#0316FF] mb-4">Questions</h2>
-              
-              <p className="text-sm max-lg:text-xs 2xl:text-base mb-8">Visit our Frequently Asked Questions to find helpful information.</p>
-              </div>
-              <div className="mb-5 border border-[#AFAFAF] rounded-3xl p-4">
-                <h3 className="font-semibold mb-1 max-lg:text-sm 2xl:text-base">Can&apos;t locate the answers you need?</h3>
-                <p className="text-sm max-lg:text-xs 2xl:text-base text-[#5A5A5A]">We&apos;re here to help with any questions you have!</p>
-
-                <div className='pt-4'>
-                <p className="text-sm max-lg:text-xs 2xl:text-base font-medium mb-2">Ask Your Question</p>
-                <div className="relative">
-                  <input 
-                    type="text" 
-                    placeholder="How do I restore lost or deleted data?" 
-                    className="w-full p-4 max-lg:p-3 border border-[#AFAFAF] rounded-2xl text-sm max-lg:text-xs 2xl:text-base text-black placeholder:text-black"
-                  />
-                  <button 
-                    type="submit"
-                    className="inline-flex items-center px-6 max-lg:px-4 py-3 max-lg:py-2 text-sm max-lg:text-xs font-medium rounded-full bg-[linear-gradient(145deg,#00EF88,#0316FF)] text-white hover:opacity-80 mt-4"
-                  >
-                    Send Now
-                    <Image src="/capsule.png" alt="Send Now" width={14} height={14} className="ml-2" />
-                  </button>
+            <div>
+                {/* For screens larger than medium */}
+                <div className="max-w-[18rem] max-md:hidden">
+                  <h2 className="text-5xl max-lg:text-4xl 2xl:text-6xl font-extrabold mb-1">Frequently</h2>
+                  <h2 className="text-5xl max-lg:text-4xl 2xl:text-6xl font-extrabold mb-1">Asked</h2>
+                  <h2 className="text-5xl max-lg:text-4xl 2xl:text-6xl font-extrabold text-[#0316FF] mb-4">Questions</h2>
+                  
+                  <p className="text-sm max-lg:text-xs 2xl:text-base mb-8">Visit our Frequently Asked Questions to find helpful information.</p>
                 </div>
-              </div>
-              </div>
-              
-              
+                
+                {/* For medium screens and below */}
+                <div className="hidden max-md:block max-md:text-center max-md:mx-auto mb-2">
+                  <h2 className="text-6xl max-lg:text-5xl font-extrabold mb-1">Frequently Asked</h2>
+                  <h2 className="text-6xl max-lg:text-5xl font-extrabold text-[#0316FF] mb-4">Questions</h2>
+                  
+                  <p className="text-base max-lg:text-sm mb-0">Visit our Frequently Asked Questions to find helpful information.</p>
+                </div>
+
+                {/* Question container for larger screens */}
+                <div className="mb-5 border border-[#AFAFAF] rounded-3xl p-4 max-md:hidden">
+                  <h3 className="font-semibold mb-1 max-lg:text-sm 2xl:text-base">Can&apos;t locate the answers you need?</h3>
+                  <p className="text-sm max-lg:text-xs 2xl:text-base text-[#5A5A5A]">We&apos;re here to help with any questions you have!</p>
+
+                  <div className='pt-4'>
+                    <p className="text-sm max-lg:text-xs 2xl:text-base font-medium mb-2">Ask Your Question</p>
+                    <div className="relative">
+                      <input 
+                        type="text" 
+                        placeholder="How do I restore lost or deleted data?" 
+                        className="w-full p-4 max-lg:p-3 border border-[#AFAFAF] rounded-2xl text-sm max-lg:text-xs 2xl:text-base text-black placeholder:text-black"
+                      />
+                      <button 
+                        type="submit"
+                        className="inline-flex items-center px-6 max-lg:px-4 py-3 max-lg:py-2 text-sm max-lg:text-xs font-medium rounded-full bg-[linear-gradient(145deg,#00EF88,#0316FF)] text-white hover:opacity-80 mt-4"
+                      >
+                        Send Now
+                        <Image src="/capsule.png" alt="Send Now" width={14} height={14} className="ml-2" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
             </div>
           </div>
           
@@ -135,6 +144,30 @@ function Faq() {
                   onClick={() => handleToggle(index)}
                 />
               ))}
+            </div>
+          </div>
+        </div>
+        
+        {/* Question container for medium screens and below */}
+        <div className="hidden max-md:block mb-5 border border-[#AFAFAF] rounded-3xl p-4 max-w-[90%] mx-auto ">
+          <h3 className="font-semibold mb-1 max-lg:text-sm 2xl:text-base">Can&apos;t locate the answers you need?</h3>
+          <p className="text-sm max-lg:text-xs 2xl:text-base text-[#5A5A5A]">We&apos;re here to help with any questions you have!</p>
+
+          <div className='pt-4'>
+            <p className="text-sm max-lg:text-xs 2xl:text-base font-medium mb-2">Ask Your Question</p>
+            <div className="relative">
+              <input 
+                type="text" 
+                placeholder="How do I restore lost or deleted data?" 
+                className="w-full p-4 max-lg:p-3 border border-[#AFAFAF] rounded-2xl text-sm max-lg:text-xs 2xl:text-base text-black placeholder:text-black"
+              />
+              <button 
+                type="submit"
+                className="inline-flex items-center px-6 max-lg:px-4 py-3 max-lg:py-2 text-sm max-lg:text-xs font-medium rounded-full bg-[linear-gradient(145deg,#00EF88,#0316FF)] text-white hover:opacity-80 mt-4"
+              >
+                Send Now
+                <Image src="/capsule.png" alt="Send Now" width={14} height={14} className="ml-2" />
+              </button>
             </div>
           </div>
         </div>
