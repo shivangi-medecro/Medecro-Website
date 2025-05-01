@@ -27,7 +27,7 @@ function WhyUs() {
       <div className="relative z-20 w-full max-w-7xl mx-auto flex justify-center items-center">
         <div className="flex max-md:flex-col max-md:gap-4 flex-row items-center justify-center px-6">
           {/* Rectangle image for max-md screens - positioned to right with margin */}
-          <div className="hidden max-md:block absolute right-16 top-36 -translate-y-[55%] z-0 py-8">
+          <div className="hidden max-sm:hidden max-md:block absolute right-16 top-36 -translate-y-[55%] z-0 py-8">
             <Image 
               src="/WhyUs/big-rectangle.png" 
               alt="Border" 

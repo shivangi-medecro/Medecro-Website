@@ -97,28 +97,28 @@ function Products() {
         </div>
 
         {/* Mobile Products Container - Centers all products */}
-        <div className="flex flex-col items-center px-4">
+        <div className="flex flex-col items-center px-4 max-sm:px-2">
           {/* Product 1 */}
-          <div className="flex mb-20 w-full justify-center">
-            <div className="w-[40%] flex justify-end">
-              <div className="">
+          <div className="flex mb-20 w-full justify-center max-sm:flex-col max-sm:items-center max-sm:mb-12">
+            <div className="w-[40%] flex justify-end max-sm:w-full max-sm:justify-center max-sm:mb-4">
+              <div className="max-sm:flex max-sm:justify-center">
                 <Image
                   src="/products/product1.png"
                   alt="Your Practice, Your Control"
                   width={300}
                   height={300}
-                  className="object-contain z-10"
+                  className="object-contain z-10 max-sm:w-[200px] max-sm:h-[200px]"
                 />
               </div>
             </div>
-            <div className="w-[40%] flex flex-col justify-center">
-              <h3 className="text-[#231F20] text-[30px] leading-tight font-bold mb-3 text-right">Your Practice, Your<br />Control</h3>
-              <p className="text-[#231F20] text-[18px] mb-5 text-right">
+            <div className="w-[40%] flex flex-col justify-center max-sm:w-full max-sm:items-center">
+              <h3 className="text-[#231F20] text-[30px] leading-tight font-bold mb-3 text-right max-sm:text-center">Your Practice, Your<br />Control</h3>
+              <p className="text-[#231F20] text-[18px] mb-5 text-right max-sm:text-center">
                 An all-in-one platform for clinic<br />management
               </p>
               <Link 
                 href="#" 
-                className="inline-flex self-end items-center px-5 py-2.5 text-[16px] rounded-full bg-gradient-to-r from-[#00EF88] to-[#0316FF] text-white"
+                className="inline-flex self-end items-center px-5 py-2.5 text-[16px] rounded-full bg-gradient-to-r from-[#00EF88] to-[#0316FF] text-white max-sm:self-center"
               >
                 Book a Demo
                 <Image src="/capsule.png" alt="Book Demo" width={18} height={18} className="ml-2" />
@@ -127,26 +127,26 @@ function Products() {
           </div>
 
           {/* Product 2 */}
-          <div className="flex mb-20 w-full flex-row-reverse justify-center ml-14">
-            <div className="w-[40%] flex justify-start">
-              <div className="">
+          <div className="flex mb-20 w-full flex-row-reverse justify-center ml-14 max-sm:flex-col max-sm:items-center max-sm:mb-12 max-sm:ml-0">
+            <div className="w-[40%] flex justify-start max-sm:w-full max-sm:justify-center max-sm:mb-4">
+              <div className="max-sm:flex max-sm:justify-center">
                 <Image
                   src="/products/product2.png"
                   alt="Care at Your Fingertips"
                   width={300}
                   height={300}
-                  className="object-contain z-10"
+                  className="object-contain z-10 max-sm:w-[200px] max-sm:h-[200px]"
                 />
               </div>
             </div>
-            <div className="w-[40%] flex flex-col justify-center">
-              <h3 className="text-[#231F20] text-[30px] leading-tight font-bold mb-3 text-left">Care at Your<br />Fingertips</h3>
-              <p className="text-[#231F20] text-[18px] mb-5 text-left">
+            <div className="w-[40%] flex flex-col justify-center max-sm:w-full max-sm:items-center">
+              <h3 className="text-[#231F20] text-[30px] leading-tight font-bold mb-3 text-left max-sm:text-center">Care at Your<br />Fingertips</h3>
+              <p className="text-[#231F20] text-[18px] mb-5 text-left max-sm:text-center">
                 Empowering doctors on the go<br />Experience
               </p>
               <Link 
                 href="#" 
-                className="inline-flex self-start items-center px-5 py-2.5 text-[16px] rounded-full bg-gradient-to-r from-[#00EF88] to-[#0316FF] text-white"
+                className="inline-flex self-start items-center px-5 py-2.5 text-[16px] rounded-full bg-gradient-to-r from-[#00EF88] to-[#0316FF] text-white max-sm:self-center"
               >
                 Download the App
                 <Image src="/capsule.png" alt="Download" width={18} height={18} className="ml-2" />
@@ -155,26 +155,26 @@ function Products() {
           </div>
 
           {/* Product 3 */}
-          <div className="flex mb-10 w-full justify-center">
-            <div className="w-[40%] flex justify-end">
-              <div className="">
+          <div className="flex mb-10 w-full justify-center max-sm:flex-col max-sm:items-center">
+            <div className="w-[40%] flex justify-end max-sm:w-full max-sm:justify-center max-sm:mb-4">
+              <div className="max-sm:flex max-sm:justify-center">
                 <Image
                   src="/products/product3.png"
                   alt="Where Patients Find You"
                   width={300}
                   height={300}
-                  className="object-contain z-10"
+                  className="object-contain z-10 max-sm:w-[200px] max-sm:h-[200px]"
                 />
               </div>
             </div>
-            <div className="w-[40%] flex flex-col justify-center">
-              <h3 className="text-[#231F20] text-[30px] leading-tight font-bold mb-3 text-right">Where Patients<br />Find You</h3>
-              <p className="text-[#231F20] text-[18px] mb-5 text-right">
+            <div className="w-[40%] flex flex-col justify-center max-sm:w-full max-sm:items-center">
+              <h3 className="text-[#231F20] text-[30px] leading-tight font-bold mb-3 text-right max-sm:text-center">Where Patients<br />Find You</h3>
+              <p className="text-[#231F20] text-[18px] mb-5 text-right max-sm:text-center">
                 Improving patient<br />experiences
               </p>
               <Link 
                 href="#" 
-                className="inline-flex self-end items-center px-5 py-2.5 text-[16px] rounded-full bg-gradient-to-r from-[#00EF88] to-[#0316FF] text-white"
+                className="inline-flex self-end items-center px-5 py-2.5 text-[16px] rounded-full bg-gradient-to-r from-[#00EF88] to-[#0316FF] text-white max-sm:self-center"
               >
                 Download the App
                 <Image src="/capsule.png" alt="Download" width={18} height={18} className="ml-2" />

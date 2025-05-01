@@ -20,19 +20,19 @@ function HealthcarePower() {
             </div>
 
             {/* Right Content */}
-            <div className="lg:ml-6 max-w-[34rem] 2xl:max-w-[43rem] max-md:text-center max-md:mt-6">
+            <div className="lg:ml-6 max-w-[34rem] 2xl:max-w-[43rem] max-sm:text-center max-md:text-center max-md:mt-6">
               <h2 className="text-[2.5rem] 2xl:text-5xl leading-[1.2] 2xl:leading-[1.2] font-bold mb-5">
                 <span className="text-[#0316FF]">Powering the Future</span><br />
                 <span className="text-[#231F20]">of Healthcare!</span>
               </h2>
               
-              <p className="text-[#231F20] max-lg:text-sm 2xl:text-xl font-medium text-[1rem] mb-4 2xl:mb-6">
+              <p className="text-[#231F20] max-lg:text-sm 2xl:text-xl font-medium text-[1rem] mb-4 2xl:mb-6 max-sm:w-[80%] max-sm:mx-auto max-sm:mb-6 max-sm:text-[#6C6C6C] max-sm:font-normal">
                 Medecro boosts efficiency for Healthcare Organizations, NGOs, Clinics, and
                 Individuals with AI-powered automation. Streamline workflows, reduce admin tasks,
                 and enhance outcomes—reclaim valuable time for care.
               </p>
 
-              <p className="text-[#231F20] max-lg:text-sm 2xl:text-xl font-semibold 2xl:font-bold text-[1.1rem] mb-4 2xl:mb-6">
+              <p className="text-[#231F20] max-lg:text-sm 2xl:text-xl font-semibold 2xl:font-bold text-[1.1rem] mb-4 2xl:mb-6 max-sm:w-[60%] max-sm:mx-auto max-sm:text-[#6C6C6C] max-sm:font-bold max-sm:text-base">
                 Join us in our journey and let&apos;s revolutionize healthcare.
               </p>
 

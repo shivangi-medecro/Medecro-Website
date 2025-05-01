@@ -31,10 +31,9 @@ const MobileSidebar: React.FC<MobileSidebarProps> = ({ isOpen, onClose }) => {
       
       {/* Right sidebar - narrower width to match image */}
       <div 
-        className={`absolute top-0 right-0 h-full w-[35%] bg-[#D8E7F9]/90 backdrop-blur-sm transform transition-transform duration-300 ease-in-out flex flex-col max-sm:w-[80%] justify-end ${
+        className={`absolute top-0 right-0 h-full bg-[#D8E7F9]/90 backdrop-blur-sm transform transition-transform duration-300 ease-in-out flex flex-col justify-end max-sm:w-full sm:w-[50%] ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
-        style={{ width: '35%' }}
       >
         {/* Navigation Links - right aligned and positioned at bottom */}
         <div className="px-6 mb-24 flex flex-col items-end text-right">

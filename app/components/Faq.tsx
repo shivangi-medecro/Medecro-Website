@@ -12,7 +12,7 @@ interface AccordionItemProps {
 // Accordion Item component
 const AccordionItem: React.FC<AccordionItemProps> = ({ question, answer, isOpen, onClick }) => {
   return (
-    <div className="border border-[#AFAFAF] rounded-2xl p-4 mb-4">
+    <div className="border border-[#AFAFAF] rounded-2xl p-4 mb-4 max-sm:w-full">
       <div 
         className="flex justify-between items-center cursor-pointer" 
         onClick={onClick}
@@ -27,7 +27,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ question, answer, isOpen,
         </div>
       </div>
       {isOpen && (
-        <div className="mt-4 text-sm max-lg:text-xs 2xl:text-base text-gray-600 pr-10">
+        <div className="mt-4 text-sm max-lg:text-xs 2xl:text-base text-gray-600 pr-10 max-sm:pr-4">
           {answer}
         </div>
       )}
@@ -80,10 +80,10 @@ function Faq() {
 
   return (
     <section className="py-16 bg-white">
-      <div className="container mx-auto px-4 max-w-6xl max-lg:max-w-4xl max-md:max-w-[80%]">
-        <div className="flex max-md:flex-col justify-between">
+      <div className="container mx-auto px-4 max-w-6xl max-lg:max-w-4xl max-md:max-w-[80%] max-sm:w-[95%] max-sm:max-w-none max-sm:px-0">
+        <div className="flex max-md:flex-col justify-between max-sm:w-full">
           {/* Left Column */}
-          <div className="min-w-[45%] p-8">
+          <div className="min-w-[45%] p-8 max-sm:p-0 max-sm:pb-4 max-sm:w-full">
             <div>
                 {/* For screens larger than medium */}
                 <div className="max-w-[18rem] max-md:hidden">
@@ -95,9 +95,9 @@ function Faq() {
                 </div>
                 
                 {/* For medium screens and below */}
-                <div className="hidden max-md:block max-md:text-center max-md:mx-auto mb-2">
-                  <h2 className="text-6xl max-lg:text-5xl font-extrabold mb-1">Frequently Asked</h2>
-                  <h2 className="text-6xl max-lg:text-5xl font-extrabold text-[#0316FF] mb-4">Questions</h2>
+                <div className="hidden max-md:block max-md:text-center max-md:mx-auto mb-2 max-sm:w-full max-sm:px-4">
+                  <h2 className="text-6xl max-lg:text-5xl font-extrabold mb-1 max-sm:text-4xl">Frequently Asked</h2>
+                  <h2 className="text-6xl max-lg:text-5xl font-extrabold text-[#0316FF] mb-4 max-sm:text-4xl">Questions</h2>
                   
                   <p className="text-base max-lg:text-sm mb-0">Visit our Frequently Asked Questions to find helpful information.</p>
                 </div>
@@ -129,8 +129,8 @@ function Faq() {
           </div>
           
           {/* Right Column */}
-          <div className="min-w-[55%] max-lg:min-w-[60%] 2xl:min-w-[65%] p-8 2xl:pt-12">
-            <div className="max-h-[500px] 2xl:max-h-[600px] overflow-y-auto pr-4 hide-scrollbar" 
+          <div className="min-w-[55%] max-lg:min-w-[60%] 2xl:min-w-[65%] p-8 2xl:pt-12 max-sm:p-0 max-sm:w-full max-sm:px-4">
+            <div className="max-h-[500px] 2xl:max-h-[600px] overflow-y-auto pr-4 hide-scrollbar max-sm:pr-0" 
                  style={{
                    scrollbarWidth: 'none', /* Firefox */
                    msOverflowStyle: 'none', /* IE and Edge */
@@ -149,7 +149,7 @@ function Faq() {
         </div>
         
         {/* Question container for medium screens and below */}
-        <div className="hidden max-md:block mb-5 border border-[#AFAFAF] rounded-3xl p-4 max-w-[90%] mx-auto ">
+        <div className="hidden max-md:block mb-5 border border-[#AFAFAF] rounded-3xl p-4 max-w-[90%] mx-auto max-sm:max-w-none max-sm:w-[calc(100%-2rem)] max-sm:mx-auto">
           <h3 className="font-semibold mb-1 max-lg:text-sm 2xl:text-base">Can&apos;t locate the answers you need?</h3>
           <p className="text-sm max-lg:text-xs 2xl:text-base text-[#5A5A5A]">We&apos;re here to help with any questions you have!</p>
 

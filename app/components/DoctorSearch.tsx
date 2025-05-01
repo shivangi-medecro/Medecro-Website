@@ -6,19 +6,27 @@ function DoctorSearch() {
     <div className="w-full font-outfit relative">
       <div className="absolute inset-0 bg-gradient-to-b from-[#CBE3FF]/80 to-white" />
       
-      <div className="container  max-w-[1400px] mx-auto px-6 max-md:py-20 py-20 max-lg:py-0 pb-52 max-lg:pb-52 max-md:pb-56 relative">
+      <div className="container max-w-[1400px] mx-auto px-6 max-md:py-20 py-20 max-lg:py-0 pb-52 max-lg:pb-52 max-md:pb-56 relative max-sm:px-4">
         {/* Main content wrapper */}
-        <div className="flex items-center justify-between max-w-[1000px] mx-auto max-md:justify-center">
+        <div className="flex items-center justify-between max-w-[1000px] mx-auto max-md:justify-center max-sm:flex-col">
           {/* Text Column */}
-          <div className=" max-w-[500px] max-lg:max-w-[440px] max-md:max-w-[300px] max-md:pr-2">
-            <h2 className="text-[2.75rem] max-lg:text-[2rem]  leading-[1.2] font-bold mb-3">
+          <div className="max-w-[500px] max-lg:max-w-[440px] max-md:max-w-[300px] max-md:pr-2 max-sm:text-center max-sm:mx-auto max-sm:pr-0 max-sm:w-full">
+            <h2 className="max-sm:hidden text-[2.75rem] max-lg:text-[2rem]  leading-[1.2] font-bold mb-3">
               <span className="text-[#231F20] max-md:text-[2.2rem]">Find the </span>
               <span className="text-[#0316FF] max-md:text-[2.2rem]">Right Doctor,</span>
               <br />
               <span className="text-[#231F20] max-md:text-[2.2rem]">Right Away</span>
             </h2>
+
+            <h2 className="sm:hidden text-[2.75rem] max-lg:text-[2rem] text-[#231F20] max-md:text-[2.2rem] leading-[1.2] font-bold mb-3 max-sm:w-full max-sm:mx-auto">Find the
+              <span className="text-[#0316FF] "> Right Doctor,</span>
+              <br />
+              Right Away
+            </h2>
+
             
-            <p className="text-[#231F20] text-base max-lg:text-sm max-md:text-sm mb-8 max-md:mb-0 max-lg:mb-6 opacity-80 max-md:w-[350px]">
+            
+            <p className="text-[#231F20] text-base max-lg:text-sm max-md:text-sm mb-8 max-md:mb-0 max-lg:mb-6 opacity-80 max-md:w-[350px] max-sm:w-full max-sm:mx-auto">
               Search top-rated doctors by name, specialty, or location,
               and book appointments quickly and effortlessly.
             </p>
@@ -89,7 +97,7 @@ function DoctorSearch() {
           </div>
 
           {/* Image Column */}
-          <div className="relative w-[420px] h-[460px] max-md:w-[35%] max-md:h-[260px]">
+          <div className="max-sm:hidden relative w-[420px] h-[460px] max-md:w-[35%] max-md:h-[260px]">
             <Image
               src="/DoctorSearch/doctor.png"
               alt="Doctor"
@@ -120,7 +128,7 @@ function DoctorSearch() {
             </div>
 
             {/* Dropdowns Row */}
-            <div className="flex gap-3">
+            <div className="flex gap-3 max-sm:flex-col">
               {/* City Dropdown */}
               <div className="flex-1">
                 <div className="bg-white rounded-md flex items-center px-4 max-lg:px-3 py-3 max-lg:py-2.5 shadow-sm cursor-pointer">

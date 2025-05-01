@@ -41,15 +41,15 @@ function Profits() {
   ];
 
   return (
-    <div className="w-full py-20 font-outfit bg-white">
-      <div className="container mx-auto px-10 max-lg:px-2 max-md:px-1">
+    <div className="w-full py-20 font-outfit bg-white ">
+      <div className="container mx-auto px-10 max-lg:px-2 max-md:px-1  ">
         <div className="mx-auto">
           {/* Heading */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 max-sm:text-center">
             <h2 className="text-[#231F20] text-base max-md:text-[13px] max-lg:text-sm 2xl:text-xl tracking-[0.18em] max-md:tracking-[0.05em] uppercase mb-3">T U R N &nbsp; Y O U R &nbsp; E X P E R T I S E &nbsp; I N T O &nbsp; M O R E &nbsp; P R O F I T S</h2>
           </div>
 
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center max-sm:px-6 ">
             {/* Desktop Layout: Row 1 (4 cards) and Row 2 (3 cards) */}
             <div className="hidden md:grid md:grid-cols-4 gap-4 mb-8 w-[90%] max-lg:w-[100%]">
               {profitCards.slice(0, 4).map((card, index) => (
@@ -100,16 +100,16 @@ function Profits() {
             </div>
 
             {/* Mobile Layout: 2-2-2-1 */}
-            <div className="md:hidden w-full max-w-full px-0 mx-auto ">
+            <div className="md:hidden w-full max-w-full px-0 mx-auto max-sm:mx-auto">
               {/* First row: 2 cards */}
-              <div className="grid grid-cols-2 gap-14 mb-5">
+              <div className="grid grid-cols-2 gap-14 max-sm:gap-6  mb-5">
                 {profitCards.slice(0, 2).map((card, index) => (
                   <div key={index} className="bg-white rounded-md relative mx-auto  w-full">
                     <div className="absolute top-6 left-0 h-[180px] flex">
                       <div className="w-[2px] bg-gray-200"></div>
                       <div className="w-[18px] bg-gradient-to-r from-gray-200/70 to-transparent"></div>
                     </div>
-                    <div className="flex flex-col items-start p-4 pl-6 pr-2">
+                    <div className="flex flex-col items-start p-4 pl-6  pr-2">
                       <div className="mb-3 h-[45px] flex items-center">
                         <Image
                           src={card.icon}
@@ -127,7 +127,7 @@ function Profits() {
               </div>
 
               {/* Second row: 2 cards */}
-              <div className="grid grid-cols-2 gap-14 mb-5">
+              <div className="grid grid-cols-2 gap-14 max-sm:gap-6 mb-5">
                 {profitCards.slice(2, 4).map((card, index) => (
                   <div key={index} className="bg-white rounded-md relative mx-auto  w-full">
                     <div className="absolute top-6 left-0 h-[180px] flex">
@@ -152,7 +152,7 @@ function Profits() {
               </div>
 
               {/* Third row: 2 cards */}
-              <div className="grid grid-cols-2 gap-14 mb-5">
+              <div className="grid grid-cols-2 gap-14 max-sm:gap-6 mb-5">
                 {profitCards.slice(4, 6).map((card, index) => (
                   <div key={index} className="bg-white rounded-md relative mx-auto  w-full">
                     <div className="absolute top-6 left-0 h-[180px] flex">
@@ -177,7 +177,7 @@ function Profits() {
               </div>
 
               {/* Fourth row: 1 card (centered) */}
-              <div className="flex justify-center">
+              <div className="flex justify-center max-sm:ml-6">
                 <div className="bg-white rounded-md relative  w-[50%]">
                   <div className="absolute top-6 left-0 h-[180px] flex">
                     <div className="w-[2px] bg-gray-200"></div>

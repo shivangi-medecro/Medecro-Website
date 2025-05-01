@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 function Future() {
   return (
-    <div className="w-full py-14 font-outfit bg-white">
+    <div className="w-full py-14 max-sm:pt-4 font-outfit bg-white">
       {/* Original desktop version (unchanged) */}
       <div className="container mx-auto px-4 max-md:hidden">
         <div className="max-w-[64rem] 2xl:max-w-[80rem] mx-auto">
@@ -54,10 +54,10 @@ function Future() {
 
       {/* Mobile version (only visible on max-md screens) */}
       <div className="hidden max-md:block max-md:py-10">
-        <div className="max-md:w-full max-md:px-20">
+        <div className="max-md:w-full max-md:px-20 max-sm:px-0">
           <div className="max-md:max-w-full max-md:flex max-md:flex-col max-md:items-center max-md:text-center">
             {/* Heading */}
-            <div className="max-md:mb-4 max-md:w-full max-md:px-20">
+            <div className="max-md:mb-4 max-md:w-full max-md:px-20 max-sm:w-[30rem]">
               <h2 className="max-md:max-w-full max-md:text-5xl max-md:text-[2rem] max-md:leading-[1.2] max-md:font-bold">
                 <span className="max-md:text-[#231F20]">A Glimpse into the </span>
                 <span className="max-md:text-[#0316FF]">Future of Healthcare</span>
@@ -65,8 +65,8 @@ function Future() {
             </div>
             
             {/* Description */}
-            <div className="max-md:w-full max-md:px-20 max-md:mb-5">
-              <p className="max-md:text-[#231F20] max-md:text-[0.95rem] max-md:font-medium">
+            <div className="max-md:w-full max-md:px-20 max-sm:px-0 max-md:mb-5 max-sm:w-[25rem]">
+              <p className="max-md:text-[#231F20] max-md:text-[0.95rem] max-md:font-medium max-sm:font-normal">
                 Check how Medecro revolutionizes healthcare with AI-powered tools,
                 seamless consultations, and automated workflows for better efficiency.
               </p>

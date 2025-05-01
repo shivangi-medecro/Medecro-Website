@@ -18,7 +18,7 @@ function HeroSection({
     titleBlack, 
     titleBlackSpan = "", 
     features,
-    chatBubblePosition = "right-6 2xl:right-10 max-md:-right-72 " 
+    chatBubblePosition = "right-6 2xl:right-10 max-md:-right-72 max-sm:right-12 " 
 }: HeroSectionProps) {
     const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false);
 
@@ -41,7 +41,7 @@ function HeroSection({
                     />
                 </div>
 
-                <div className="container mx-auto max-md:mx-14 px-4 max-md:px-0 relative z-10">
+                <div className="container mx-auto max-md:mx-14 max-sm:mx-4 px-4 max-md:px-0 relative z-10">
                     <div className="flex flex-col md:flex-row items-center py-20">
                         {/* Left Content - Touching left border on max-md screens */}
                         <div className="max-md:w-full max-md:pl-0 max-md:pr-0 max-md:ml-0 max-md:mt-20 w-1/2 max-lg:min-w-[60%] ml-24 max-lg:ml-6">

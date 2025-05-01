@@ -5,7 +5,8 @@ import Link from 'next/link'
 const Footer = () => {
   return (
     <footer className="bg-[#231F20] text-white">
-      <div className=" mx-auto px-6 lg:px-36 py-16 max-lg:py-12 ">
+      {/* Desktop Footer - hidden on small screens */}
+      <div className="mx-auto px-6 lg:px-36 py-16 max-lg:py-12 max-sm:hidden">
         {/* Top section */}
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -96,6 +97,87 @@ const Footer = () => {
               <p className="mt-1">MEDECRO TECHNOLOGIES PRIVATE LIMITED</p>
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* Mobile Footer - only visible on small screens */}
+      <div className="hidden max-sm:block py-12 px-6">
+        {/* Logo - increased size and removed subtitle text */}
+        <div className="mb-10 flex ">
+          <Image 
+            src="/Footer/footer-logo.png" 
+            alt="Medecro.ai" 
+            width={115} 
+            height={115}
+            className="object-contain"
+          />
+        </div>
+
+        {/* Navigation Links */}
+        <div className="grid grid-cols-2 gap-y-4 mb-8">
+          <Link href="/" className="text-[#00EF88] text-sm">Home</Link>
+          <Link href="/abha-abdm" className="text-white/75 text-sm">ABHA / ABDM</Link>
+          <Link href="/vision" className="text-white/75 text-sm">Vision</Link>
+          <Link href="/contact" className="text-white/75 text-sm">Contact us</Link>
+          <Link href="/career" className="text-white/75 text-sm">Career</Link>
+          <Link href="/privacy" className="text-white/75 text-sm">Privacy Policy</Link>
+        </div>
+
+        {/* Social Media Icons */}
+        <div className="flex space-x-6 mb-6">
+          <Link href="#" className="hover:opacity-80">
+            <div className="w-[20px] h-[20px] relative">
+              <Image src="/Footer/facebook.png" alt="Facebook" fill className="object-contain" />
+            </div>
+          </Link>
+          <Link href="#" className="hover:opacity-80">
+            <div className="w-[20px] h-[20px] relative">
+              <Image src="/Footer/instagram.png" alt="Instagram" fill className="object-contain" />
+            </div>
+          </Link>
+          <Link href="#" className="hover:opacity-80">
+            <div className="w-[20px] h-[20px] relative">
+              <Image src="/Footer/linkedin.png" alt="LinkedIn" fill className="object-contain" />
+            </div>
+          </Link>
+          <Link href="#" className="hover:opacity-80">
+            <div className="w-[20px] h-[20px] relative">
+              <Image src="/Footer/twitter.png" alt="Twitter" fill className="object-contain" />
+            </div>
+          </Link>
+        </div>
+
+        {/* Horizontal Line */}
+        <div className="w-full h-[1px] bg-white/20 mb-6"></div>
+
+        {/* Address */}
+        <div className="mb-4">
+          <p className="text-xs text-white/80 leading-tight">
+            TR-406, 4th Floor A11F Coworking,<br />
+            Plot No. 21 & 21A, Sector 142, Noida-201304
+          </p>
+        </div>
+
+        {/* Contact Info */}
+        <div className="space-y-3 mb-4">
+          <div className="flex items-center gap-2">
+            <div className="w-[18px] h-[18px] relative">
+              <Image src="/Footer/phone.png" alt="Phone" fill className="object-contain" />
+            </div>
+            <span className="text-xs text-white/80">+91 93405 05933</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <div className="w-[18px] h-[18px] relative">
+              <Image src="/Footer/email.png" alt="Email" fill className="object-contain" />
+            </div>
+            <span className="text-xs text-white/80">medecro.ai123@gmail.com</span>
+          </div>
+        </div>
+
+        {/* Copyright - centered text */}
+        <div className="text-[10px] text-white/60 text-center">
+          <p>©2024 Medecro.ai | All Rights Reserved</p>
+          <p className="mt-1">MEDECRO TECHNOLOGIES PRIVATE LIMITED</p>
         </div>
       </div>
     </footer>
