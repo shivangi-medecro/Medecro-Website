@@ -12,7 +12,7 @@ function Statistics() {
             alt="Background design"
             width={400}
             height={400}
-            className="object-contain 2xl:w-[30rem] max-md:w-[16rem] max-md:h-[16rem]"
+            className="object-contain 2xl:w-[30rem] max-md:w-[16rem] max-md:h-[16rem] max-sm:w-[14rem] max-sm:h-[16rem]"
           />
         </div>
 

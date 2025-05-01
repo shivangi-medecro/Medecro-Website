@@ -102,8 +102,8 @@ const Navbar = () => {
               <Image 
                 src="/mobile-menu.png" 
                 alt="Menu" 
-                width={40} 
-                height={40} 
+                width={35} 
+                height={35} 
                 className="object-contain" 
               />
             </button>
