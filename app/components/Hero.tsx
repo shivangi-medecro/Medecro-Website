@@ -17,13 +17,13 @@ function HeroSection({
     titleBlack, 
     titleBlackSpan = "", 
     features,
-    chatBubblePosition = "right-6 2xl:right-10" 
+    chatBubblePosition = "right-6 2xl:right-10 max-md:-right-72 " 
 }: HeroSectionProps) {
     return (
         <div className="relative w-full min-h-screen bg-[#f6f9fd] overflow-hidden font-outfit">
             <div>
-                {/* Background Image */}
-                <div className="absolute inset-0 w-full h-full">
+                {/* Background Image - Hidden for max-md screens */}
+                <div className="max-md:hidden absolute inset-0 w-full h-full">
                     <Image
                         src={backgroundImage}
                         alt="Background"
@@ -34,18 +34,18 @@ function HeroSection({
                     />
                 </div>
 
-                <div className="container mx-auto px-4 relative z-10">
+                <div className="container mx-auto max-md:mx-14 px-4 max-md:px-0 relative z-10">
                     <div className="flex flex-col md:flex-row items-center py-20">
-                        {/* Left Content */}
-                        <div className="w-1/2 max-lg:min-w-[60%] ml-24 max-lg:ml-6">
-                            <div className=" max-lg:text-4xl text-[44px] 2xl:text-[50px]  font-bold mb-6  ">
+                        {/* Left Content - Touching left border on max-md screens */}
+                        <div className="max-md:w-full max-md:pl-0 max-md:pr-0 max-md:ml-0 max-md:mt-20 w-1/2 max-lg:min-w-[60%] ml-24 max-lg:ml-6">
+                            <div className="max-md:text-4xl max-md:pl-0 max-lg:text-4xl text-[44px] 2xl:text-[50px] font-bold mb-6">
                                 <h1 className="text-[#0316FF]">
                                     {titleBlue} {titleBlackSpan && <span className='text-[#231F20]'>{titleBlackSpan}</span>}
                                 </h1>
-                                <h1 className="text-[#231F20] -mt-2 max-lg:mt-0">{titleBlack}</h1>
+                                <h1 className="text-[#231F20] -mt-2 max-md:mt-0 max-lg:mt-0">{titleBlack}</h1>
                             </div>
 
-                            <div className="space-y-2 mb-8">
+                            <div className="space-y-2 max-md:pl-0 max-md:space-y-1 mb-8">
                                 {features.map((feature, index) => (
                                     <div key={index} className="flex items-start">
                                         <Image src="/Hero/tick.png" alt="Check" width={20} height={20} className="mt-1 mr-3" />
@@ -56,7 +56,7 @@ function HeroSection({
 
                             <Link
                                 href="#"
-                                className="inline-flex items-center px-5 py-3 text-sm rounded-full bg-[linear-gradient(145deg,#00EF88,#0316FF)] text-white hover:opacity-80 relative group"
+                                className="max-md:ml-0 inline-flex items-center px-5 py-3 text-sm rounded-full bg-[linear-gradient(145deg,#00EF88,#0316FF)] text-white hover:opacity-80 relative group"
                             >
                                 Schedule a Demo
                                 <Image src="/capsule.png" alt="Schedule" width={14} height={14} className="ml-2" />
@@ -81,9 +81,9 @@ function HeroSection({
                             </Link>
                         </div>
 
-                        {/* Right Content */}
-                        <div className="w-1/2 relative flex items-center justify-end">
-                            <div className="relative h-[520px] " style={{ width: '420px'}}>
+                        {/* Right Content - Touching right border on max-md screens */}
+                        <div className="max-md:w-full max-md:flex max-md:justify-end max-md:pr-0 max-md:mt-0 w-1/2 relative flex items-center justify-end">
+                            <div className="relative max-md:h-[400px] max-md:mr-0 h-[520px]" style={{ width: '420px', maxWidth: '100%' }}>
                                 {/* Chat bubbles - using fixed width container with absolute positioning */}
                                 <div className={`absolute -bottom-4 ${chatBubblePosition} flex flex-col space-y-3 max-w-[150px] 2xl:max-w-[175px]`}>
                                     {/* First bubble - Only top-left corner not rounded */}
@@ -92,7 +92,7 @@ function HeroSection({
                                     </div>
 
                                     {/* Second bubble - All corners rounded except bottom-right */}
-                                    <div className="bg-white p-5 rounded-[24px] rounded-br-none shadow-md">
+                                    <div className="bg-white p-5 max-md:p-3 rounded-[24px] rounded-br-none shadow-md">
                                         <p className="text-[#231F20] text-xs 2xl:text-sm">
                                             Could you please confirm if this is a routine cleaning or if you&apos;re experiencing any specific concerns?
                                         </p>
@@ -101,6 +101,17 @@ function HeroSection({
                                     {/* AI image just below the chat bubbles */}
                                     <div className="w-[55px] h-[55px] max-lg:w-[45px] max-lg:h-[45px] self-end">
                                         <Image src="/Hero/ai.png" alt="AI Assistant" width={55} height={55} className="object-contain" />
+                                    </div>
+                                    
+                                    {/* Mobile Menu - Only visible on max-md screens, placed directly below AI image */}
+                                    <div className="max-md:block hidden self-end mt-6">
+                                        <Image 
+                                            src="/mobile-menu.png" 
+                                            alt="Mobile Menu" 
+                                            width={45} 
+                                            height={45} 
+                                            className="object-contain" 
+                                        />
                                     </div>
                                 </div>
                             </div>

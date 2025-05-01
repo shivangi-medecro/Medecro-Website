@@ -20,7 +20,7 @@ function Solutions() {
         </p>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-0 max-lg:max-w-[55rem] max-w-[64rem] 2xl:max-w-[90rem] mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-0 max-md:gap-y-16 max-md:max-w-[33rem] max-lg:max-w-[55rem] max-w-[64rem] 2xl:max-w-[90rem] mx-auto">
           {/* Feature 1 */}
           <div className="flex flex-col items-center text-center px-6 relative max-lg:-mt-1">
             <Image

@@ -25,7 +25,7 @@ function WhyUs() {
       
       {/* Content container */}
       <div className="relative z-20 w-full max-w-7xl mx-auto flex justify-center items-center">
-        <div className="flex flex-row items-center justify-center  px-6">
+        <div className="flex max-md:flex-col max-md:gap-4 flex-row items-center justify-center  px-6">
           {/* Left content with heading */}
           <div className="flex flex-col items-center text-white max-lg:max-w-[300px] lg:max-w-[380px] text-center ">
             <h2 className="text-4xl 2xl:text-5xl font-bold mb-10 text-center">Why Choose Medecro.ai?</h2>

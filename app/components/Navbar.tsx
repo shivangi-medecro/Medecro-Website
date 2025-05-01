@@ -16,7 +16,7 @@ const Navbar = () => {
         </Link>
 
         <div className="flex items-center max-lg:text-xs text-sm 2xl:text-base">
-          <div className="flex items-center space-x-8 max-lg:space-x-4">
+          <div className="max-md:hidden flex items-center space-x-8 max-lg:space-x-4">
             <Link 
               href="/vision" 
               className={`text-black hover:text-[#0316FF] ${pathname === '/vision' ? 'text-[#0316FF]' : ''}`}
