@@ -58,7 +58,7 @@ const blogPosts = [
 function Blog() {
   return (
     <div className="w-full bg-[#1E1E1E] pt-80 max-lg:pt-80 pb-20 max-md:px-0">
-      <div className="max-md:w-[92%] mx-auto  px-4 max-lg:px-0">
+      <div className="max-md:w-[92%] mx-auto  px-4 max-lg:px-14 max-md:px-0">
         <div className=" mx-auto ">
           {/* Header */}
           <div className="flex justify-between items-center mb-20">

@@ -65,7 +65,7 @@ const MobileSidebar: React.FC<MobileSidebarProps> = ({ isOpen, onClose }) => {
             </div>
             
             {/* ABHA / ABDM */}
-            <div>
+            {/* <div>
               <Link 
                 href="/abha-abdm" 
                 onClick={onClose}
@@ -75,7 +75,7 @@ const MobileSidebar: React.FC<MobileSidebarProps> = ({ isOpen, onClose }) => {
               >
                 ABHA / ABDM
               </Link>
-            </div>
+            </div> */}
             
             {/* Pricing & Planning */}
             <div>

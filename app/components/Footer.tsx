@@ -28,7 +28,7 @@ const Footer = () => {
             <Link href="/" className="text-[#00EF88] hover:opacity-80">Home</Link>
             <Link href="/vision" className="hover:text-[#00EF88]">Vision</Link>
             <Link href="/career" className="hover:text-[#00EF88]">Career</Link>
-            <Link href="/abha-abdm" className="hover:text-[#00EF88]">ABHA / ABDM</Link>
+            {/* <Link href="/abha-abdm" className="hover:text-[#00EF88]">ABHA / ABDM</Link> */}
             <Link href="/contact" className="hover:text-[#00EF88]">Contact us</Link>
             <Link href="/privacy" className="hover:text-[#00EF88]">Privacy Policy</Link>
           </div>
@@ -116,7 +116,7 @@ const Footer = () => {
         {/* Navigation Links */}
         <div className="grid grid-cols-2 gap-y-4 mb-8">
           <Link href="/" className="text-[#00EF88] text-sm">Home</Link>
-          <Link href="/abha-abdm" className="text-white/75 text-sm">ABHA / ABDM</Link>
+          {/* <Link href="/abha-abdm" className="text-white/75 text-sm">ABHA / ABDM</Link> */}
           <Link href="/vision" className="text-white/75 text-sm">Vision</Link>
           <Link href="/contact" className="text-white/75 text-sm">Contact us</Link>
           <Link href="/career" className="text-white/75 text-sm">Career</Link>

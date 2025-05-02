@@ -121,11 +121,11 @@ function BookDemo() {
               </div>
               
               {/* Captcha */}
-              <div className="max-sm:flex max-sm:items-center max-sm:justify-between max-sm:gap-3 max-sm:mb-0">
+              <div className=" ">
                 <div className="bg-[#E9E9E9] p-[1px] rounded-md w-[45%] shadow-sm max-sm:w-[55%]">
                   <div className="flex items-center">
-                    <div className="bg-white rounded-sm p-3 max-sm:p-3 ">
-                      <Image src="/Demo/captcha.png" alt="reCAPTCHA" width={35} height={18} className="max-sm:w-[22px] max-sm:h-[15px]" />
+                    <div className="bg-white rounded-sm p-3  ">
+                      <Image src="/Demo/captcha.png" alt="reCAPTCHA" width={35} height={18} className="max-sm:w-[25px] max-sm:h-[20px]" />
                     </div>
                     <div className="ml-4 max-sm:ml-2">
                       <p className="text-xs max-sm:text-[10px]">Protected by reCAPTCHA</p>
@@ -135,13 +135,13 @@ function BookDemo() {
                 </div>
                 
                 {/* Submit Button - only for small screens will be on same line */}
-                <div className="mt-8 max-sm:mt-0 max-sm:w-[45%]">
+                <div className="mt-8  ">
                   <button
                     type="submit"
-                    className="inline-flex items-center px-6 py-3 text-sm font-medium rounded-full bg-[linear-gradient(145deg,#00EF88,#0316FF)] text-white hover:opacity-80 max-sm:px-5 max-sm:py-3 max-sm:text-xs max-sm:w-full max-sm:justify-center"
+                    className="inline-flex items-center px-6 py-3 text-sm font-medium rounded-full bg-[linear-gradient(145deg,#00EF88,#0316FF)] text-white hover:opacity-80  max-sm:text-xs "
                   >
                     Book a Demo
-                    <Image src="/capsule.png" alt="Book Demo" width={14} height={14} className="ml-2 max-sm:w-[12px] max-sm:h-[12px]" />
+                    <Image src="/capsule.png" alt="Book Demo" width={14} height={14} className="ml-2 " />
                   </button>
                 </div>
               </div>

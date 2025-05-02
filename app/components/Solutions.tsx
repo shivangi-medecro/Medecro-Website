@@ -34,7 +34,7 @@ function Solutions() {
             <p className="text-gray-600 mb-4 text-xs max-lg:text-[11px] 2xl:text-sm">
               Early detection of diseases using India-specific AI models ensures better patient outcomes.
             </p>
-            <a href="#" className="text-[#0316FF] text-sm underline decoration-[0.5px] underline-offset-8">Learn More</a>
+            {/* <a href="#" className="text-[#0316FF] text-sm underline decoration-[0.5px] underline-offset-8">Learn More</a> */}
             {/* Separator */}
             <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 w-[1px] h-4/5 bg-gray-200"></div>
           </div>
@@ -54,7 +54,7 @@ function Solutions() {
             <p className="text-gray-600 mb-4 text-xs max-lg:text-[11px] 2xl:text-sm">
               Flexible AI solutions that adapt to your clinic&apos;s unique workflows and requirements.
             </p>
-            <a href="#" className="text-[#0316FF] text-sm underline decoration-[0.5px] underline-offset-8">Learn More</a>
+            {/* <a href="#" className="text-[#0316FF] text-sm underline decoration-[0.5px] underline-offset-8 max-md:mt-3">Learn More</a> */}
             {/* Separator */}
             <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 w-[1px] h-4/5 bg-gray-200"></div>
           </div>
@@ -72,7 +72,7 @@ function Solutions() {
             <p className="text-gray-600 mb-4 text-xs max-lg:text-[11px] 2xl:text-sm">
               Personalized healthcare with AI recommendations and optimized operations.
             </p>
-            <a href="#" className="text-[#0316FF] text-sm underline decoration-[0.5px] underline-offset-8">Learn More</a>
+            {/* <a href="#" className="text-[#0316FF] text-sm underline decoration-[0.5px] underline-offset-8">Learn More</a> */}
             {/* Separator */}
             <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 w-[1px] h-4/5 bg-gray-200"></div>
           </div>
@@ -90,7 +90,7 @@ function Solutions() {
             <p className="text-gray-600 mb-4 text-xs max-lg:text-[11px] 2xl:text-sm text-center">
               Harness cutting-edge AI to expedite healthcare advancements and scientific discoveries.
             </p>
-            <a href="#" className="text-[#0316FF] text-sm underline decoration-[0.5px] underline-offset-8">Learn More</a>
+            {/* <a href="#" className="text-[#0316FF] text-sm underline decoration-[0.5px] underline-offset-8">Learn More</a> */}
           </div>
         </div>
       </div>

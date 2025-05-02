@@ -4,7 +4,7 @@ import Image from 'next/image'
 function DoctorSearch() {
   return (
     <div className="w-full font-outfit relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-[#CBE3FF]/80 to-white" />
+      <div className=" absolute inset-0 bg-gradient-to-b from-[#CBE3FF]/80 to-white" />
       
       <div className="container max-w-[1400px] mx-auto px-6 max-md:py-20 py-20 max-lg:py-0 pb-52 max-lg:pb-52 max-md:pb-56 relative max-sm:px-4">
         {/* Main content wrapper */}
@@ -102,7 +102,7 @@ function DoctorSearch() {
               src="/DoctorSearch/doctor.png"
               alt="Doctor"
               fill
-              className="object-contain max-lg:ml-10 max-md:ml-4"
+              className="object-contain max-lg:ml-0 max-md:ml-4"
               priority
             />
           </div>

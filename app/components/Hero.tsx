@@ -40,6 +40,9 @@ function HeroSection({
                         style={{ objectPosition: 'center' }}
                     />
                 </div>
+                
+                {/* Gradient Background for max-md screens */}
+                <div className="md:hidden absolute inset-0 w-full h-full bg-gradient-to-b from-[#8bb5dc] via-[#f0f8ff] to-[#cce0f1]"></div>
 
                 <div className="container mx-auto max-md:mx-14 max-sm:mx-4 px-4 max-md:px-0 relative z-10">
                     <div className="flex flex-col md:flex-row items-center py-20">
