@@ -1,5 +1,11 @@
+'use client'
 import React from 'react'
 import Image from 'next/image'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Navigation, Pagination } from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
 
 function Profits() {
   const profitCards = [
@@ -45,8 +51,8 @@ function Profits() {
       <div className="container mx-auto px-10 max-lg:px-2 max-md:px-1  ">
         <div className="mx-auto">
           {/* Heading */}
-          <div className="text-center mb-16 max-sm:text-center">
-            <h2 className="text-[#231F20] text-base max-md:text-[13px] max-lg:text-sm 2xl:text-xl tracking-[0.18em] max-md:tracking-[0.05em] uppercase mb-3">T U R N &nbsp; Y O U R &nbsp; E X P E R T I S E &nbsp; I N T O &nbsp; M O R E &nbsp; P R O F I T S</h2>
+          <div className="text-center mb-16 max-sm:text-center max-sm:w-[70%] max-sm:mx-auto">
+            <h2 className="text-[#231F20] text-base max-md:text-[13px] max-lg:text-sm 2xl:text-xl tracking-[0.18em] max-md:tracking-[0.05em] uppercase mb-3 max-sm:text-[#B2B2B2] max-sm:text-sm">T U R N &nbsp; Y O U R &nbsp; E X P E R T I S E &nbsp; I N T O &nbsp; M O R E &nbsp; P R O F I T S</h2>
           </div>
 
           <div className="flex flex-col items-center max-sm:px-6 ">
@@ -99,8 +105,8 @@ function Profits() {
               ))}
             </div>
 
-            {/* Mobile Layout: 2-2-2-1 */}
-            <div className="md:hidden w-full max-w-full px-0 mx-auto max-sm:mx-auto">
+            {/* Tablet Layout: 2-2-2-1 */}
+            <div className="md:hidden max-sm:hidden  w-full max-w-full px-0 mx-auto max-sm:mx-auto">
               {/* First row: 2 cards */}
               <div className="grid grid-cols-2 gap-14 max-sm:gap-6  mb-5">
                 {profitCards.slice(0, 2).map((card, index) => (
@@ -197,6 +203,57 @@ function Profits() {
                     <p className="text-[#231F20] text-[12px] leading-snug w-full">{profitCards[6].description}</p>
                   </div>
                 </div>
+              </div>
+            </div>
+
+            {/* Mobile Carousel Layout - Only visible up to 430px */}
+            <div className="sm:hidden w-full relative profits-carousel-container pb-20">
+              <div className="hero-carousel-container" style={{padding: "0 10px"}}>
+                <Swiper
+                  modules={[Navigation, Pagination]}
+                  spaceBetween={20}
+                  slidesPerView={1.35}
+                  pagination={{
+                    clickable: true,
+                  }}
+                  navigation={{
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                  }}
+                  loop={true}
+                  className="hero-swiper"
+                >
+                  {profitCards.map((card, index) => (
+                    <SwiperSlide key={index}>
+                      <div className="bg-white rounded-md relative mx-auto w-full p-4 pb-10">
+                        <div className="absolute top-6 left-0 h-[180px] flex">
+                          <div className="w-[2px] bg-gray-200"></div>
+                          <div className="w-[18px] bg-gradient-to-r from-gray-200/70 to-transparent"></div>
+                        </div>
+                        <div className="flex flex-col items-start p-4 pl-6 pr-2">
+                          <div className="mb-3 h-[45px] flex items-center">
+                            <Image
+                              src={card.icon}
+                              alt={card.title}
+                              width={40}
+                              height={40}
+                              className="object-contain"
+                            />
+                          </div>
+                          <h3 className="text-[#231F20] text-[18px] font-medium mb-2 leading-tight w-full">{card.title}</h3>
+                          <p className="text-[#231F20] text-[12px] leading-snug w-full">{card.description}</p>
+                        </div>
+                      </div>
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+                
+                {/* Custom Navigation Arrows */}
+                <div className="swiper-button-prev !text-gray-500 !bg-transparent"></div>
+                <div className="swiper-button-next !text-gray-500 !bg-transparent"></div>
+                
+                {/* Custom Pagination */}
+                <div className="swiper-pagination !bottom-[50px] !z-20"></div>
               </div>
             </div>
           </div>

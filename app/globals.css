@@ -76,3 +76,56 @@ body {
   opacity: 1;
   background: #1424d7;
 }
+
+/* Profits Carousel Styles for Mobile Only */
+@media (max-width: 430px) {
+  .profits-carousel-container {
+    position: relative;
+    padding-bottom: 20px;
+  }
+  
+  .profits-carousel-container .swiper-button-next,
+  .profits-carousel-container .swiper-button-prev {
+    width: 25px !important;
+    height: 25px !important;
+    top: 50%;
+  }
+  
+  .profits-carousel-container .swiper-button-prev {
+    left: -13px !important;
+  }
+  
+  .profits-carousel-container .swiper-button-next {
+    right: -13px !important;
+  }
+  
+  .profits-carousel-container .swiper-button-next:after,
+  .profits-carousel-container .swiper-button-prev:after {
+    font-size: 16px !important;
+    font-weight: bold;
+  }
+  
+  /* Custom pagination styling for profits */
+  .profits-carousel-container .swiper-pagination-bullet {
+    width: 8px !important;
+    height: 8px !important;
+    background: #777 !important;
+    opacity: 0.5 !important;
+    margin: 0 2px !important;
+  }
+  
+  .profits-carousel-container .swiper-pagination-bullet-active {
+    opacity: 1 !important;
+    background: #0316FF !important;
+  }
+  
+  .profits-carousel-container .swiper-pagination {
+    bottom: -5px !important;
+  }
+}
+
+@media (min-width: 431px) {
+  .profits-carousel-container {
+    display: none;
+  }
+}
