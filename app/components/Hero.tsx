@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import MobileSidebar from './MobileSidebar'
+// import MobileSidebar from './MobileSidebar'
 
 interface HeroSectionProps {
     backgroundImage: string;
@@ -20,11 +20,11 @@ function HeroSection({
     features,
     chatBubblePosition = "right-6 2xl:right-10 max-md:-right-72 max-sm:right-12 " 
 }: HeroSectionProps) {
-    const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false);
+    // const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false);
 
-    const toggleMobileSidebar = () => {
-        setIsMobileSidebarOpen(!isMobileSidebarOpen);
-    };
+    // const toggleMobileSidebar = () => {
+    //     setIsMobileSidebarOpen(!isMobileSidebarOpen);
+    // };
 
     return (
         <div className="relative w-full min-h-screen bg-[#f6f9fd] overflow-hidden font-outfit">
@@ -95,7 +95,7 @@ function HeroSection({
                         <div className="max-md:w-full max-md:flex max-md:justify-end max-md:pr-0 max-md:mt-0 w-1/2 relative flex items-center justify-end">
                             <div className="relative max-md:h-[400px] max-md:mr-0 h-[520px]" style={{ width: '420px', maxWidth: '100%' }}>
                                 {/* Chat bubbles - using fixed width container with absolute positioning */}
-                                <div className={`absolute -bottom-4 ${chatBubblePosition} flex flex-col space-y-3 max-w-[150px] 2xl:max-w-[175px]`}>
+                                <div className={`absolute bottom-4 ${chatBubblePosition} flex flex-col space-y-3 max-w-[150px] 2xl:max-w-[175px]`}>
                                     {/* First bubble - Only top-left corner not rounded */}
                                     <div className="bg-white py-3 px-5 rounded-[20px] rounded-tl-none shadow-md text-center">
                                         <p className="text-[#231F20] font-medium text-xs 2xl:text-sm">Ask AI Assistant?</p>
@@ -114,7 +114,7 @@ function HeroSection({
                                     </div>
                                     
                                     {/* Mobile Menu - Only visible on max-md screens, placed directly below AI image */}
-                                    <div className="max-md:block hidden self-end mt-6">
+                                    {/* <div className="max-md:block hidden self-end mt-6">
                                         <button 
                                             onClick={toggleMobileSidebar} 
                                             className="focus:outline-none"
@@ -127,7 +127,7 @@ function HeroSection({
                                                 className="object-contain" 
                                             />
                                         </button>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>
@@ -136,7 +136,7 @@ function HeroSection({
             </div>
 
             {/* Mobile Sidebar */}
-            <MobileSidebar isOpen={isMobileSidebarOpen} onClose={() => setIsMobileSidebarOpen(false)} />
+            {/* <MobileSidebar isOpen={isMobileSidebarOpen} onClose={() => setIsMobileSidebarOpen(false)} /> */}
         </div>
     )
 }

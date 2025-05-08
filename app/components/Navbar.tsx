@@ -15,7 +15,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-16 max-md:px-6 flex items-center justify-between">
         <Link href="/" className="flex items-center">
           <Image src="/logo.png" alt="Medecro Logo" width={150} height={40} className="max-lg:w-[130px] max-lg:h-[30px]" />
-        </Link>
+        </Link> 
 
         <div className="flex items-center max-lg:text-xs text-sm 2xl:text-base">
           <div className="max-md:hidden flex items-center space-x-8 max-lg:space-x-4">

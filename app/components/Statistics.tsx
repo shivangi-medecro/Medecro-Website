@@ -1,7 +1,11 @@
 'use client'
 import Image from 'next/image'
+import MobileSidebar from './MobileSidebar'
+import { useState } from 'react';
+
 
 function Statistics() {
+  const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false);
   return (
     <section className="bg-white py-28 max-sm:py-28 2xl:py-32 max-md:py-16 max-md:flex max-md:justify-center max-md:w-full">
       <div className="container mx-auto px-6 lg:px-36 2xl:px-52 relative max-md:container max-md:px-4 max-md:mx-auto max-md:flex max-md:flex-col max-md:items-center max-md:w-full">
@@ -11,10 +15,25 @@ function Statistics() {
             src="/Statistics/rainbow.png"
             alt="Background design"
             width={400}
-            height={400}
+            height={400} 
             className="object-contain 2xl:w-[30rem] max-md:w-[16rem] max-md:h-[16rem] max-sm:w-[14rem] max-sm:h-[16rem]"
           />
         </div>
+
+        {/* Mobile menu button - only visible on small screens */}
+        <button 
+              // className="hidden max-md:block"
+              className="absolute hidden max-md:block -top-16 2xl:-top-20 right-28 2xl:right-40 max-lg:-right-12 max-md:absolute max-md:-right-[9rem] max-md:-top-[10rem] max-sm:right-[2rem] max-sm:-top-[13rem] z-10 "
+              onClick={() => setIsMobileSidebarOpen(true)}
+            >
+              <Image 
+                src="/mobile-menu.png" 
+                alt="Menu" 
+                width={35} 
+                height={35} 
+                className="object-contain" 
+              />
+            </button>
 
         {/* Heading */}
         <div className="mb-4 max-md:mb-8 max-md:z-10 max-md:relative  max-md:w-full max-md:-ml-32 max-sm:-ml-0 ">
@@ -95,6 +114,9 @@ function Statistics() {
           </div>
         </div>
       </div>
+
+      {/* Mobile Sidebar */}
+      <MobileSidebar isOpen={isMobileSidebarOpen} onClose={() => setIsMobileSidebarOpen(false)} />
     </section>
   )
 }
